@@ -27,7 +27,7 @@ npm run dev
 - 10 个工具：一键抠图、透明裁剪、图片分割、文本填充、文本识别、文本拆分合并、清理、查找替换、设计统计、尺寸适配。
 - 8 种界面语言：English、简体中文、日本語、한국어、Français、Deutsch、Español、Português。覆盖界面、参数、帮助、错误、确认和无障碍文本；首次默认英文、确认保存后进入，设置中可切换。每次生产构建检查词条覆盖，详见 [多语言验收](docs/LANGUAGE_ACCEPTANCE.md)。OCR 仍识别简中/英文；用户填写的自定义候选内容不会随界面翻译。
 - 图标库、地图、团队设计库、快速定位、批量导出及基础比例缩放没有入口、处理器或专用资源进入正式构建；AI 生图与图片压缩保持暂停。
-- 反馈保留微信号 `GoldM0535` 及复制，去掉二维码；GitHub 为 [BeatsAD](https://github.com/BeatsAD)，X 为 [WenBin8nk](https://x.com/WenBin8nk)。版本页底行显示插件开源地址，待用户创建专属仓库后配置，当前显示“待创建”。
+- 反馈保留微信号 `GoldM0535` 及复制，去掉二维码；GitHub 为 [BeatsAD](https://github.com/BeatsAD)，X 为 [WenBin8nk](https://x.com/WenBin8nk)。版本页底行的插件开源地址指向公开仓库 [DesignProMAX Toolkit](https://github.com/BeatsAD/DesignProMAX-Toolkit)。
 - 一键抠图需用户自备密钥、保存图片上传授权；外部服务可能收费。测试未调用付费服务。
 
 ## 构建与检查
@@ -81,7 +81,7 @@ dist/build-info.json  构建输入及 UTF-8 体积证据
 
 本地工具及 OCR 不上传文档或图片。抠图仅在用户授权并主动处理时将选中图片和密钥发送给所选服务；自定义服务需支持 HTTPS、CORS、`POST /remove-background`、Bearer 密钥及 `image` 表单字段，并返回 PNG。密钥保存在客户端存储中，不加密；不写入反馈或源码。
 
-项目授权见 [MIT](LICENSE)，第三方资源保留各自许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。当前尚未创建开源仓库、推送或打包上架；Figma 开发插件已接入当前构建，真实字体、图片写回、事务恢复及离线 OCR 链路已有样例证据；OCR 数字样例存在误识别。外部抠图服务、复杂布局与大文件性能、完整参数矩阵及发布材料，仍需在公开发布前验收。
+项目源码公开于 [DesignProMAX Toolkit](https://github.com/BeatsAD/DesignProMAX-Toolkit)，授权见 [MIT](LICENSE)，第三方资源保留各自许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。当前尚未打包上架 Figma Community；Figma 开发插件已接入当前构建，真实字体、图片写回、事务恢复及离线 OCR 链路已有样例证据；OCR 数字样例存在误识别。外部抠图服务、复杂布局与大文件性能、完整参数矩阵及发布材料，仍需在插件正式发布前验收。
 
 [当前实施状态](docs/IMPLEMENTATION_STATUS.md) · [测试记录](docs/BROWSER_ACCEPTANCE.md) · [完整开发方案](docs/DEVELOPMENT_PLAN.md)
 
