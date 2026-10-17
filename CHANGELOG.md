@@ -4,6 +4,8 @@ This records source changes. Source versions do not establish Figma Community pu
 
 ## Unreleased
 
+- Prepared 0.3.3 with eight-language welcome-announcement instructions for exporting filtered diagnostic logs and providing reproduction details. Existing language preferences and announcement acknowledgements are preserved; first use still offers English as the default language choice.
+
 - Replaced an account-specific test plugin ID with synthetic data, kept internal process records and historical migration tools local-only, and shortened public artwork provenance while preserving source references and checksums. Public guides now summarize usage and acceptance limits; existing Git history is unchanged.
 
 - Updated fflate from 0.8.2 to 0.8.3 for [GHSA-px8p-9vwx-vf98](https://github.com/advisories/GHSA-px8p-9vwx-vf98). Added bounded malformed-ZIP64 regression checks for Node/browser exports and valid ZIP/gzip controls. Product code uses gzip decoding; no product ZIP extraction call was found.
