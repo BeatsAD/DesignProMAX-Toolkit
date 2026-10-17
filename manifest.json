@@ -1,0 +1,16 @@
+{
+  "name": "DesignProMAX Toolkit",
+  "api": "1.0.0",
+  "editorType": [
+    "figma"
+  ],
+  "main": "dist/main.js",
+  "ui": "dist/ui.html",
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": [
+      "*"
+    ],
+    "reasoning": "Optional background removal connects to remove.bg or a user-configured HTTPS service only after explicit image upload consent. Local tools and OCR do not send images or document content."
+  }
+}

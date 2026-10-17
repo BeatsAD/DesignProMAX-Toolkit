@@ -1,0 +1,80 @@
+.text-recognition-page {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.text-recognition-page > .panel,
+.text-recognition-result,
+.text-recognition-result > .panel-status-row,
+.text-recognition-textarea {
+  min-width: 0;
+}
+
+.text-recognition-selection,
+.text-recognition-workflow,
+.text-recognition-result {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.text-recognition-selection {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--surface-subtle);
+  color: var(--primary);
+}
+
+.text-recognition-selection div,
+.text-recognition-intro {
+  min-width: 0;
+}
+
+.text-recognition-selection strong {
+  display: block;
+  overflow: hidden;
+  color: var(--text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-recognition-selection span,
+.text-recognition-intro span {
+  color: var(--muted);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+}
+
+.text-recognition-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+.text-recognition-result > .panel-status-row {
+  margin-bottom: 0;
+}
+
+.text-recognition-result > .panel-status-row .tag {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.text-recognition-textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 190px;
+  resize: vertical;
+  padding: var(--space-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-control);
+  background: var(--control-bg);
+  color: var(--text);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}

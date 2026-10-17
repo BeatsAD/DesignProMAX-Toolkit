@@ -1,0 +1,114 @@
+/* Figma-only refinements. The recorded reference stylesheet is unchanged. */
+:root, :root[data-theme] {
+  --space-2: 4px;
+  --space-section: 12px;
+  --panel-inset: 12px;
+  --resize-safe-inset: 52px;
+  /* Keep the host brand token intact; use a darker surface for small white text. */
+  --action-bg: color-mix(in srgb, var(--theme-bg-brand) 75%, #000);
+  --action-hover: color-mix(in srgb, var(--theme-bg-brand-hover) 75%, #000);
+  --action-pressed: color-mix(in srgb, var(--theme-bg-brand-pressed) 65%, #000);
+  --action-danger: color-mix(in srgb, var(--theme-bg-danger) 75%, #000);
+  --action-danger-hover: color-mix(in srgb, var(--theme-bg-danger-hover) 70%, #000);
+  --muted: color-mix(in srgb, var(--theme-text) 76%, var(--theme-bg));
+  --weak: var(--muted);
+  --readable-accent: color-mix(in srgb, var(--theme-text-brand) 80%, #000);
+  --status-success-text: color-mix(in srgb, var(--theme-text-success) 65%, #000);
+  --status-warning-text: color-mix(in srgb, var(--theme-text-warning) 65%, #000);
+  --status-danger-text: var(--action-danger);
+  --danger-text: var(--action-danger);
+}
+.app-shell { --batch-result-selection-column: 28px; }
+:root[data-theme="dark"], :root.figma-dark:not([data-theme]) {
+  --readable-accent: var(--theme-text-brand);
+  --status-success-text: color-mix(in srgb, var(--theme-text-success) 85%, #fff);
+  --status-warning-text: var(--theme-text-warning);
+  --status-danger-text: var(--theme-text);
+  --danger-text: color-mix(in srgb, var(--theme-bg-danger) 60%, #fff);
+}
+
+.app-shell .content {
+  margin-bottom: var(--resize-safe-inset);
+  padding-bottom: var(--space-3);
+}
+.app-shell .page, .app-shell .two-col, .app-shell .settings-subpage { gap: var(--space-section); }
+.app-shell .page:has(.tool-grid) { gap: var(--space-3); }
+.app-shell .panel { padding: var(--panel-inset); }
+.app-shell .panel-head { margin-bottom: var(--space-3); }
+.app-shell .field { gap: var(--space-1); }
+.app-shell .field > span:first-child,
+.app-shell .field-label, .app-shell .text-fill-modal-label { color: var(--text); }
+.app-shell .topbar-page-back { min-height: 28px; gap: var(--space-2); border-radius: var(--radius-control); }
+.app-shell .settings-subpage-title { margin: 0; }
+.app-shell .settings-back { min-height: 28px; }
+.app-shell .home-banner { height: clamp(84px, 27vw, 104px); }
+.app-shell .home-banner img { width: 100%; height: 100%; object-fit: cover; }
+
+.app-shell .btn.primary:not(:disabled),
+.app-shell .tabs button.active,
+.app-shell .segmented button.active { background: var(--action-bg); border-color: var(--action-bg); color: #fff; }
+.app-shell .btn.primary:hover:not(:disabled),
+.app-shell .tabs button.active:hover,
+.app-shell .segmented button.active:hover { background: var(--action-hover); border-color: var(--action-hover); color: #fff; }
+.app-shell .btn.primary:active:not(:disabled) { background: var(--action-pressed); border-color: var(--action-pressed); }
+.app-shell .btn.danger:not(:disabled) { background: var(--action-danger); border-color: var(--action-danger); color: #fff; }
+.app-shell .btn.danger:hover:not(:disabled),
+.app-shell .btn.danger:active:not(:disabled) { background: var(--action-danger-hover); border-color: var(--action-danger-hover); }
+.app-shell .topbar-icon-btn.active,
+.app-shell .theme-toggle-btn[aria-pressed="true"] { color: var(--selected-text); }
+.app-shell .notice-bar { margin-block: var(--space-3); }
+.app-shell .notice-bar.success { color: var(--status-success-text); }
+.app-shell .tag.success { color: var(--status-success-text); }
+.app-shell .notice-bar.warning { color: var(--status-warning-text); }
+.app-shell .notice-bar.error { color: var(--status-danger-text); }
+.app-shell .settings-list-item.danger .settings-list-icon,
+.app-shell .settings-list-item.danger .settings-list-copy strong,
+.app-shell .settings-field-error, .app-shell .status-line.error,
+.app-shell .image-split-result-error,
+.app-shell .confirm-dialog.tone-danger .confirm-dialog-title { color: var(--danger-text); }
+.app-shell .notice-bar.info, .app-shell .notice-bar.loading,
+.app-shell .message-notice-bar, .app-shell .tag.primary,
+.app-shell .field-label-link { color: var(--readable-accent); }
+.app-shell .tool-status.warning, .app-shell .tag.warning { color: var(--status-warning-text); }
+.app-shell .text-fill-rule.is-configured { background: var(--surface-soft); border-color: var(--line); }
+.app-shell .text-fill-custom-toolbar { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.app-shell .text-fill-custom-toolbar > span { flex: 1 1 180px; text-align: left; }
+.app-shell .text-fill-custom-toolbar .btn { width: auto; flex: 0 0 auto; margin-left: auto; }
+
+/* Waiting states do not reserve a large, empty result viewport. */
+.app-shell .text-fill-preview-body,
+.app-shell .replace-preview-body,
+.app-shell .cleanup-result-body { height: auto; min-height: 0; overflow: visible; }
+.app-shell .empty-state,
+.app-shell .text-fill-preview-body .empty-state,
+.app-shell .replace-preview-body .empty-state,
+.app-shell .cleanup-result-body .empty-state { height: auto; min-height: 96px; }
+.app-shell .replace-preview-scroll,
+.app-shell .replace-style-preview-scroll { max-height: 340px; overflow: auto; }
+.app-shell .statistics-result-text { height: auto; min-height: 160px; max-height: 340px; }
+
+/* Narrow result cards keep the before/after decision in one visible column. */
+.app-shell .text-fill-preview-cards { display: grid; gap: var(--space-3); min-width: 0; }
+.app-shell .text-fill-preview-card { min-width: 0; padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface-soft); }
+.app-shell .text-fill-preview-card-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-1); }
+.app-shell .text-fill-preview-card-head .panel-count { flex: 0 1 auto; text-align: right; }
+.app-shell .text-fill-select-all, .app-shell .text-fill-item-select { display: inline-flex; align-items: center; gap: var(--space-1); min-height: 28px; min-width: 28px; max-width: 100%; cursor: pointer; }
+.app-shell .text-fill-item-select > span { overflow-wrap: anywhere; min-width: 0; }
+.app-shell .text-fill-preview-card dl { display: grid; gap: var(--space-3); margin: 0; }
+.app-shell .text-fill-preview-card dl > div { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: var(--space-3); }
+.app-shell .text-fill-preview-card dt { color: var(--muted); }
+.app-shell .text-fill-preview-card dd { min-width: 0; margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+.app-shell .table-check-target, .app-shell .checkbox-hit-target { display: inline-grid; place-items: center; min-width: 28px; min-height: 28px; cursor: pointer; }
+.app-shell .checkbox-hit-target:has(input:disabled) { cursor: not-allowed; }
+.app-shell .checkbox-hit-target:has(input:focus-visible),
+.app-shell .table-check-target:has(input:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: -2px; border-radius: 4px; }
+.app-shell .batch-result-table .batch-result-check-cell { width: 28px; min-width: 28px; }
+.app-shell .text-fill-preview-scroll { height: auto; max-height: 340px; }
+.app-shell .confirm-dialog-title { font-size: var(--font-size-emphasis) !important; }
+.app-shell .confirm-dialog { padding: var(--panel-inset); }
+.app-shell .confirm-dialog-summary { color: var(--text); }
+
+@media (min-width: 521px) {
+  .app-shell .text-fill-preview-cards { display: none; }
+  .app-shell .text-fill-preview-table { --batch-result-field-column: 112px; --batch-result-action-column: 80px; }
+}

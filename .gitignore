@@ -1,0 +1,17 @@
+node_modules/
+dist/
+output/
+manifest.local.json
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+/DesignProMAX Toolkit/
+
+# Local collaboration rules, internal specifications, and generated resources
+AGENTS.md
+SPEC.md
+/DesignProMAX-plugin-v1.0.0/
+/mastergo-plugin-package/
+/public/vector-map-geometries/

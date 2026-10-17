@@ -1,0 +1,3 @@
+import {useEffect,useState} from 'react';
+import {readResource} from '../../../ui/resources';
+export function useBundledImage(id:string,enabled=true){const[src,setSrc]=useState<string>();const[error,setError]=useState(false);const[attempt,setAttempt]=useState(0);useEffect(()=>{if(!enabled||src)return;const abort=new AbortController();void readResource('home-banner',abort.signal).then(data=>{if(!abort.signal.aborted)setSrc(`data:${data.mimeType};base64,${data.data}`);}).catch(()=>{if(!abort.signal.aborted)setError(true);});return()=>abort.abort();},[id,enabled,src,attempt]);return{src,error,retry:()=>{setError(false);setAttempt(n=>n+1);}};}

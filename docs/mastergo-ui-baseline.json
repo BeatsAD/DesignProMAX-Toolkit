@@ -1,0 +1,72 @@
+{
+  "reference": "DesignProMAX MasterGo v1.0.48",
+  "captured": "2026-10-16",
+  "exactCopies": {
+    "src/reference/ui/styles.css": "035eb4e1ece37b2b821d12c608eb2e19de311bc5c42a231b1dc7c2bda87f9186",
+    "src/reference/ui/components/ToolLayoutManager.tsx": "ed3282c287f362022b6a395999338adc3448972f6970711d6060fba577a22ca6",
+    "src/reference/ui/components/MessageCenter.css": "3815091a14416ca6f02e3cc0103c842d0235ff406fa51706928cb3039f11a1e4",
+    "src/reference/ui/pages/HelpPage.css": "597ccc548807a12c640e4c0a2ca1500ef455ba084a5379ca5903a16d42b2df4d",
+    "src/reference/features/image-split/ui/ImageSplitPage.css": "bea521548ce025f3daf472a8b3e2d9362d4bc73b8061be853b5c7d2acc721734",
+    "src/reference/features/text-recognition/ui/TextRecognitionPage.css": "624634c1b8a19b04854182ce93e02436a6c5b15bf5df506bf7a116186f3a18de",
+    "src/reference/ui/assets/logo.png": "a5bbffc8e464435ffb3a22cfed408068da25b473df0933b8b05ee5366afccbde",
+    "src/reference/ui/assets/home-banner.png": "4226bb72f5fe1e86f2ebab150ba5f6b5b5adec7453c111dd511f832130b07afe"
+  },
+  "customizedFiles": {
+    "src/reference/ui/pages/HomePage.tsx": {
+      "originalSha256": "e0e923265e285e584c34a92d2f32ae1c9ec980e7f85821b49e6fb2322b018ccc",
+      "reason": "User approved replacing baked-in banner text with a generated text-free image and a dedicated localized HomeBanner component on 2026-10-16; tool cards and interactions are preserved."
+    },
+    "src/reference/i18n.tsx": {
+      "originalSha256": "d66001c4703c2340dd8c3ccedf4de52bd34279f125df918c80f65eaca97db5cc",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/ui/components/ui.tsx": {
+      "originalSha256": "2179edcd87392a626e9b30e649c85925d1fc0c4e2c1c1d407215beb67077135c",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/ui/pages/HelpPage.tsx": {
+      "originalSha256": "59b5f2ee46d825d7308992a96143a9d9e861c13eb2081f3a42a27abdb624ef17",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/find-replace/ui/ReplacePage.tsx": {
+      "originalSha256": "c7720fc8a3fc29c006cf95d7fecf600f174d967b85a9891be876d9c46e1d07cb",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/settings/ui/SettingsPage.tsx": {
+      "originalSha256": "7253bd1f2caaf8e7293b1be8734c39699bacc335aaf7ac0e0c4d29460d459006",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/scale/ui/ScalePage.tsx": {
+      "originalSha256": "ec44a08bd669766b0882712c7d0d703a3621a844280ed12b309a5d66977e706a",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/text-recognition/ui/TextRecognitionPage.tsx": {
+      "originalSha256": "3e69fc2aa962d23e9f57792d9d029c2e7108baaf0b5c02498b5b3fc0bab3adeb",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/design-stats/ui/StatisticsPage.tsx": {
+      "originalSha256": "bd0db0454f26b14c52010135a740b50fb720128bbeb0a12a9027fecd1171d860",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/text-fill/ui/TextFillPage.tsx": {
+      "originalSha256": "1ae7e7732d193ded40b3b1c692a5f3ef8efbe5e1e3b498b431e666da5cf9bb21",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/cleanup/ui/CleanupPage.tsx": {
+      "originalSha256": "fd392c7c13a0693dda95a804d946546bfe1c699a4624f83681f9ee5c2258ce3b",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/remove-bg/ui/CutoutPage.tsx": {
+      "originalSha256": "216d43417493391c56c9b7cb97f17cd7e34c2104aa3e18f0e8929c0bce94f7e1",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/text-split-merge/ui/TextSplitMergePage.tsx": {
+      "originalSha256": "136ff3ff6c4152317cd06f3413b22d1b5d9aea4464958a02cfff4ced48d0d05a",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    },
+    "src/reference/features/transparent-crop/ui/TransparentCropPage.tsx": {
+      "originalSha256": "153803660b20408a497c30c3f268997026032e6ce4306094771ccde3215ae857",
+      "reason": "User approved the design consistency audit implementation on 2026-10-16: responsive results, preview validity, semantic feedback, action hierarchy and explicit navigation. Reference CSS exact copies remain unchanged."
+    }
+  }
+}

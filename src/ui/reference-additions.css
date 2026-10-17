@@ -1,0 +1,61 @@
+/* Only Figma's new language choice. The reference stylesheet stays byte-identical. */
+.language-start{max-width:360px;width:calc(100% - 32px);padding:20px}.language-start h2{margin:0 0 16px}.language-start-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}.language-start-options button{min-height:32px}.language-start .dialog-actions{margin-top:16px}.language-start{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-panel);box-shadow:var(--shadow-modal)}
+.language-loading{padding:24px;color:var(--muted);font-size:12px}.home-banner[data-localized-banner]{position:relative;overflow:hidden}.localized-banner-copy{position:absolute;inset:0 35% 0 0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:8px 14px;color:white;text-align:left;pointer-events:none}.localized-banner-copy strong{font-size:clamp(14px,4.4vw,20px)!important;line-height:1.2!important}.localized-banner-copy small{margin-top:7px;font-size:clamp(10px,2.6vw,12px)!important;line-height:1.3!important}
+/* Long translations must not enlarge the original single-column page tracks. */
+.content{grid-template-columns:minmax(0,1fr)}.page-transition{min-width:0;max-width:100%}.page-transition>.page{grid-template-columns:minmax(0,1fr)}
+
+/* External feedback links use the same compact control style as copy buttons. */
+.feedback-contact-actions a.btn{text-decoration:none}
+
+/* Figma header navigation: the existing pages and controls retain their style. */
+.app-shell.app-shell-no-sidebar{--sidebar-width:0px;padding-left:0;transition:none}
+.topbar-home{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:0;border-radius:8px;background:transparent;cursor:pointer;flex:0 0 32px}
+.topbar-home img{display:block;width:32px;height:32px;object-fit:contain}
+.topbar-page-back{display:flex;align-items:center;gap:var(--space-2);min-width:0;max-width:100%;padding:0;border:0;background:transparent;color:var(--text);cursor:pointer;text-align:left}
+.topbar-page-back svg{flex-shrink:0}
+.app-shell-no-sidebar .topbar-title{min-width:0}
+.app-shell-no-sidebar .topbar-title strong{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.topbar-home:focus-visible,.topbar-page-back:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.topbar-home:hover,.topbar-page-back:hover{background:var(--surface-hover)}
+.app-shell-no-sidebar .topbar-right{flex-shrink:0;flex-wrap:nowrap}
+
+/* Equal card tracks share the tallest content requirement, including translations. */
+body{min-width:320px}
+.app-shell-no-sidebar .tool-grid{grid-auto-rows:1fr;align-items:stretch}
+.app-shell-no-sidebar .tool-card{width:100%;height:100%;min-height:72px;padding:var(--space-3)}
+
+/* Narrow Figma windows reflow content instead of shrinking type or controls. */
+.narrow-result-scroll{max-width:100%;min-width:0;overflow:auto;overscroll-behavior:contain}
+@media (max-width:520px){
+  .app-shell-no-sidebar .topbar-title strong{white-space:normal;overflow:visible;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .tool-card-title-row{flex-wrap:wrap;align-items:flex-start;gap:var(--space-1)}
+  .app-shell-no-sidebar .tool-card-title-row strong{flex:1 1 100%;white-space:normal;overflow:visible;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .tool-status{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .panel-head,.app-shell-no-sidebar .actions,.app-shell-no-sidebar .replace-inline-actions,
+  .app-shell-no-sidebar .scale-result-actions,.app-shell-no-sidebar .cleanup-result-actions,
+  .app-shell-no-sidebar .confirm-dialog-actions{flex-wrap:wrap}
+  .app-shell-no-sidebar .modal-backdrop{grid-template-columns:minmax(0,1fr)}
+  .app-shell-no-sidebar .confirm-dialog{min-width:0;justify-self:center}
+  .app-shell-no-sidebar .confirm-dialog-title{overflow-wrap:anywhere}
+  .app-shell-no-sidebar .confirm-dialog-content{overflow-y:auto}
+  .app-shell-no-sidebar .confirm-dialog-details div{flex-wrap:wrap}
+  .app-shell-no-sidebar .btn:not(.icon-only){height:auto;min-height:var(--control-height);max-width:100%;padding-block:var(--space-1);line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .btn.compact:not(.icon-only){min-height:var(--control-height-compact)}
+  .app-shell-no-sidebar .confirm-dialog-actions .btn{min-height:32px}
+  .app-shell-no-sidebar .radio-group{flex-wrap:wrap;white-space:normal}
+  .app-shell-no-sidebar .radio-option{flex:0 1 auto;max-width:100%;white-space:normal}
+  .app-shell-no-sidebar .radio-option:not(.has-description)>span{overflow:visible;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .text-fill-option-section{grid-template-columns:minmax(0,1fr);align-items:start}
+  .app-shell-no-sidebar .tabs{height:auto;min-height:var(--control-height)}
+  .app-shell-no-sidebar .tabs button,.app-shell-no-sidebar .segmented-option{height:auto;min-height:var(--control-height);white-space:normal;line-height:1.35;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .tag{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+  .app-shell-no-sidebar .batch-result-table{min-width:460px;max-width:none}
+  .app-shell-no-sidebar .text-fill-preview-table{min-width:560px}
+  .app-shell-no-sidebar .text-fill-preview-table :is(th,td):nth-child(3){width:112px}
+  .app-shell-no-sidebar .text-fill-preview-table :is(th,td):nth-child(4){width:72px}
+  .app-shell-no-sidebar .batch-result-table th{white-space:normal;overflow-wrap:anywhere;overflow:visible;padding-block:var(--space-2)}
+}
+
+/* Batch counts are plain metadata, not colored statuses. */
+.app-shell .panel-count{color:var(--muted);font-size:11px;line-height:1.5;max-width:100%;overflow-wrap:anywhere}
+@media (max-width:380px){.app-shell .statistics-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

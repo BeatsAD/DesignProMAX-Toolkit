@@ -1,0 +1,59 @@
+export const VALIDATION_ROWS=`
+%1 payload 必须是对象|%1 payload must be an object|%1 payloadはオブジェクトが必要|%1 payload는 개체여야 합니다|Le payload %1 doit être un objet|%1-Payload muss ein Objekt sein|El payload %1 debe ser un objeto|O payload %1 deve ser um objeto
+%1 必须是对象|%1 must be an object|%1 はオブジェクトが必要|%1은 개체여야 합니다|%1 doit être un objet|%1 muss ein Objekt sein|%1 debe ser un objeto|%1 deve ser um objeto
+%1 不在允许的数值范围内|%1 is outside the allowed range|%1 は範囲外です|%1이 허용 범위를 벗어났습니다|%1 est hors de la plage autorisée|%1 liegt außerhalb des erlaubten Bereichs|%1 fuera del rango permitido|%1 fora do intervalo permitido
+%1 不在允许的枚举范围内|%1 is not an allowed option|%1 は許可された選択肢ではありません|%1은 허용된 옵션이 아닙니다|%1 n’est pas une option autorisée|%1 ist keine erlaubte Option|%1 no es una opción permitida|%1 não é uma opção permitida
+%1 不能为空|%1 cannot be empty|%1 は空にできません|%1은 비워 둘 수 없습니다|%1 ne peut pas être vide|%1 darf nicht leer sein|%1 no puede estar vacío|%1 não pode estar vazio
+%1 包含无效枚举或超过 %2 项|%1 has invalid options or more than %2 items|%1 の選択肢が無効か %2 項目超過|%1에 잘못된 옵션 또는 %2개 초과|%1 contient des options invalides ou plus de %2 éléments|%1 enthält ungültige Optionen oder über %2 Einträge|%1 contiene opciones inválidas o más de %2 elementos|%1 contém opções inválidas ou mais de %2 itens
+%1 包含未知字段|%1 contains unknown fields|%1 に不明なフィールドがあります|%1에 알 수 없는 필드가 있습니다|%1 contient des champs inconnus|%1 enthält unbekannte Felder|%1 contiene campos desconocidos|%1 contém campos desconhecidos
+%1 包含非写入字段|%1 contains fields that cannot be written|%1 に書き込めないフィールドがあります|%1에 쓸 수 없는 필드가 있습니다|%1 contient des champs non modifiables|%1 enthält nicht schreibbare Felder|%1 contiene campos no modificables|%1 contém campos não graváveis
+%1 含有无效文本项|%1 contains invalid text items|%1 に無効なテキストがあります|%1에 잘못된 텍스트 항목이 있습니다|%1 contient des textes invalides|%1 enthält ungültige Texte|%1 contiene textos inválidos|%1 contém textos inválidos
+%1 含有无效项|%1 contains invalid items|%1 に無効な項目があります|%1에 잘못된 항목이 있습니다|%1 contient des éléments invalides|%1 enthält ungültige Einträge|%1 contiene elementos inválidos|%1 contém itens inválidos
+%1 含有非 0-255 整数|%1 must contain integers from 0 to 255|%1 は0～255の整数が必要|%1에는 0–255 정수만 허용|%1 doit contenir des entiers de 0 à 255|%1 muss Ganzzahlen von 0 bis 255 enthalten|%1 debe contener enteros de 0 a 255|%1 deve conter inteiros de 0 a 255
+%1 单项不得超过 32 MiB|Each %1 item must be at most 32 MiB|%1 は1件32 MiB以下|%1 항목당 최대 32 MiB|Chaque %1 doit être de 32 MiB maximum|Jeder %1-Eintrag darf höchstens 32 MiB haben|Cada %1 debe tener máximo 32 MiB|Cada %1 deve ter no máximo 32 MiB
+%1 必须且只能包含一个有效对象 ID|%1 must contain exactly one valid object ID|%1 は有効なID1つのみ必要|%1에는 유효한 개체 ID 하나만 필요|%1 doit contenir un seul ID valide|%1 muss genau eine gültige Objekt-ID enthalten|%1 debe contener un único ID válido|%1 deve conter um único ID válido
+%1 必须为 %2-%3|%1 must be between %2 and %3|%1 は %2～%3|%1은 %2–%3이어야 합니다|%1 doit être entre %2 et %3|%1 muss zwischen %2 und %3 liegen|%1 debe estar entre %2 y %3|%1 deve estar entre %2 e %3
+%1 必须为布尔值|%1 must be a boolean|%1 は真偽値が必要|%1은 불리언이어야 합니다|%1 doit être un booléen|%1 muss ein Wahrheitswert sein|%1 debe ser booleano|%1 deve ser booleano
+%1 必须包含 1-%2 个样式条件|%1 must contain 1–%2 style conditions|%1 はスタイル条件1～%2件が必要|%1에는 스타일 조건 1–%2개 필요|%1 exige 1 à %2 critères de style|%1 muss 1–%2 Stilkriterien enthalten|%1 requiere 1–%2 condiciones de estilo|%1 exige 1–%2 condições de estilo
+%1 必须包含 1-%2 项|%1 must contain 1–%2 items|%1 は1～%2項目が必要|%1에는 1–%2개 항목 필요|%1 exige 1 à %2 éléments|%1 muss 1–%2 Einträge enthalten|%1 requiere 1–%2 elementos|%1 exige 1–%2 itens
+%1 必须是坐标对象|%1 must be coordinates|%1 は座標が必要|%1은 좌표여야 합니다|%1 doit être des coordonnées|%1 muss Koordinaten enthalten|%1 debe ser coordenadas|%1 deve ser coordenadas
+%1 必须是字节数组|%1 must be a byte array|%1 はバイト配列が必要|%1은 바이트 배열이어야 합니다|%1 doit être un tableau d’octets|%1 muss ein Byte-Array sein|%1 debe ser un arreglo de bytes|%1 deve ser uma matriz de bytes
+%1 必须是非空普通字节数组|%1 must be a non-empty byte array|%1 は空でないバイト配列が必要|%1은 빈 배열이 아닌 바이트 배열이어야 합니다|%1 doit être un tableau d’octets non vide|%1 muss ein nichtleeres Byte-Array sein|%1 debe ser un arreglo de bytes no vacío|%1 deve ser uma matriz de bytes não vazia
+%1 必须是样式对象|%1 must be a style object|%1 はスタイルオブジェクトが必要|%1은 스타일 개체여야 합니다|%1 doit être un objet de style|%1 muss ein Stilobjekt sein|%1 debe ser un objeto de estilo|%1 deve ser um objeto de estilo
+%1 所在 payload 必须是对象|The payload containing %1 must be an object|%1 を含むpayloadはオブジェクトが必要|%1이 포함된 payload는 개체여야 합니다|Le payload contenant %1 doit être un objet|Payload mit %1 muss ein Objekt sein|El payload con %1 debe ser un objeto|O payload com %1 deve ser um objeto
+%1 最多 %2 项|%1 allows up to %2 items|%1 は最大 %2 件|%1은 최대 %2개|%1 : %2 éléments maximum|%1 erlaubt höchstens %2 Einträge|%1 permite hasta %2 elementos|%1 permite até %2 itens
+%1 最多 %2 项，单项最长 %3|%1 allows %2 items, each up to %3 characters|%1 は最大 %2 件、各 %3 文字以内|%1은 최대 %2개, 각각 %3자|%1 : %2 éléments de %3 caractères maximum|%1 erlaubt %2 Einträge mit je %3 Zeichen|%1 permite %2 elementos de hasta %3 caracteres|%1 permite %2 itens de até %3 caracteres
+%1 最多 %2 项，单项最长 %3 个字符|%1 allows %2 items, each up to %3 characters|%1 は最大 %2 件、各 %3 文字以内|%1은 최대 %2개, 각각 %3자|%1 : %2 éléments de %3 caractères maximum|%1 erlaubt %2 Einträge mit je %3 Zeichen|%1 permite %2 elementos de hasta %3 caracteres|%1 permite %2 itens de até %3 caracteres
+%1 长度不得超过 %2|%1 must not exceed %2 characters|%1 は %2 文字以内|%1은 %2자 이하여야 합니다|%1 : %2 caractères maximum|%1 darf höchstens %2 Zeichen haben|%1 no puede superar %2 caracteres|%1 não pode exceder %2 caracteres
+%1 长度必须为 %2-%3|%1 length must be %2–%3|%1 の長さは %2～%3|%1 길이는 %2–%3이어야 합니다|Longueur de %1 : %2 à %3|Länge von %1 muss %2–%3 sein|Longitud de %1: %2–%3|Comprimento de %1: %2–%3
+%1 最长 %2 个字符|%1: at most %2 characters|%1：最大 %2 文字|%1: 최대 %2자|%1 : %2 caractères maximum|%1: höchstens %2 Zeichen|%1: máximo %2 caracteres|%1: máximo %2 caracteres
+%1.color 必须为 #RRGGBB|%1.color must use #RRGGBB|%1.colorは#RRGGBBが必要|%1.color는 #RRGGBB 형식 필요|%1.color doit utiliser #RRGGBB|%1.color muss #RRGGBB verwenden|%1.color debe usar #RRGGBB|%1.color deve usar #RRGGBB
+%1.confirmed 必须为 true|%1.confirmed must be true|%1.confirmedはtrueが必要|%1.confirmed는 true여야 합니다|%1.confirmed doit être true|%1.confirmed muss true sein|%1.confirmed debe ser true|%1.confirmed deve ser true
+%1 不合法|%1 is invalid|%1 は無効です|%1이 잘못되었습니다|%1 est invalide|%1 ist ungültig|%1 no es válido|%1 é inválido
+%1 不受支持|%1 is unsupported|%1 は未対応です|%1은 지원하지 않습니다|%1 n’est pas pris en charge|%1 wird nicht unterstützt|%1 no es compatible|%1 não é compatível
+%1必须是有效的十进制数|%1 must be a valid decimal number|%1 は有効な十進数が必要|%1은 유효한 십진수여야 합니다|%1 doit être un nombre décimal valide|%1 muss eine gültige Dezimalzahl sein|%1 debe ser un decimal válido|%1 deve ser um decimal válido
+%1最多支持 %2 位小数|%1 supports up to %2 decimal places|%1 は小数最大 %2 桁|%1은 소수 %2자리까지 지원|%1 accepte %2 décimales maximum|%1 unterstützt höchstens %2 Dezimalstellen|%1 admite hasta %2 decimales|%1 suporta até %2 casas decimais
+不重复随机需要至少 %1 个可用数值，当前范围不足|Unique random generation needs %1 values; expand the range|重複なしランダムには %1 値必要です。範囲を広げてください|중복 없는 무작위에는 %1개 값 필요. 범위를 넓히세요|L’aléatoire unique exige %1 valeurs ; élargissez la plage|Eindeutiger Zufall braucht %1 Werte; Bereich vergrößern|Aleatorio único requiere %1 valores; amplía el rango|Aleatório único exige %1 valores; amplie o intervalo
+小数位必须在 0 到 %1 之间|Decimal places must be between 0 and %1|小数桁は0～%1|소수 자릿수는 0–%1|Décimales entre 0 et %1|Dezimalstellen müssen zwischen 0 und %1 liegen|Decimales entre 0 y %1|Casas decimais entre 0 e %1
+%1 包含不支持的分隔符|%1 contains unsupported separators|%1 に未対応の区切り文字があります|%1에 지원하지 않는 구분자 포함|%1 contient des séparateurs non pris en charge|%1 enthält nicht unterstützte Trennzeichen|%1 contiene separadores no admitidos|%1 contém separadores não aceitos
+mode 必须是 merge 或 split|mode must be merge or split|modeはmergeまたはsplitが必要|mode는 merge 또는 split이어야 합니다|mode doit être merge ou split|mode muss merge oder split sein|mode debe ser merge o split|mode deve ser merge ou split
+请求参数无效|Invalid request parameters|リクエスト引数が無効|요청 매개변수가 잘못됨|Paramètres de requête invalides|Ungültige Anfrageparameter|Parámetros de solicitud inválidos|Parâmetros de solicitação inválidos
+不应包含 payload|No payload is expected|payloadは不要です|payload가 없어야 합니다|Aucun payload attendu|Kein Payload erwartet|No se espera payload|Nenhum payload esperado
+日期时间配置无效|Invalid date/time settings|日時設定が無効|날짜/시간 설정이 잘못됨|Réglages de date/heure invalides|Ungültige Datums-/Zeiteinstellungen|Ajustes de fecha/hora inválidos|Configurações de data/hora inválidas
+自定义单位不能为空|Custom unit cannot be empty|単位は空にできません|사용자 단위를 비울 수 없습니다|L’unité ne peut pas être vide|Eigene Einheit darf nicht leer sein|La unidad no puede estar vacía|A unidade não pode estar vazia
+自定义连接符不能为空|Custom separator cannot be empty|区切りは空にできません|사용자 구분자를 비울 수 없습니다|Le séparateur ne peut pas être vide|Eigenes Trennzeichen darf nicht leer sein|El separador no puede estar vacío|O separador não pode estar vazio
+自定义字段名称不能为空或重复|Custom field names cannot be empty or duplicate|独自名は空欄・重複不可|사용자 필드 이름은 빈 값이나 중복 불가|Noms personnalisés non vides et uniques|Eigene Feldnamen dürfen nicht leer oder doppelt sein|Nombres personalizados no vacíos ni duplicados|Nomes personalizados não vazios nem duplicados
+历史样式与替换类型不匹配|Saved style does not match the replacement type|履歴スタイルと置換種類が不一致|저장된 스타일과 바꾸기 유형이 다름|Style mémorisé incompatible avec le type|Gespeicherter Stil passt nicht zum Ersetzungstyp|Estilo guardado no coincide con el tipo|Estilo salvo não corresponde ao tipo
+图片源请求无效|Invalid image source request|画像ソースのリクエストが無効|이미지 원본 요청이 잘못됨|Requête de source d’image invalide|Ungültige Bildquellenanfrage|Solicitud de imagen inválida|Solicitação de imagem inválida
+请确认分割结果，单次最多 50 项|Confirm split results; up to 50 per operation|分割結果を確認。1回最大50件|분할 결과를 확인하세요. 한 번에 최대 50개|Confirmez la découpe ; 50 éléments par opération|Teilung bestätigen; höchstens 50 je Vorgang|Confirma resultados; máximo 50 por operación|Confirme resultados; até 50 por operação
+原图快照无效|Invalid source image snapshot|元画像のスナップショットが無効|원본 이미지 스냅샷이 잘못됨|Instantané source invalide|Ungültiger Bildquellen-Schnappschuss|Captura del original inválida|Captura do original inválida
+分割结果无效|Invalid split output|分割結果が無効|분할 결과가 잘못됨|Résultat de découpe invalide|Ungültige Teilungsausgabe|Resultado de división inválido|Resultado de divisão inválido
+分割边界超出原图|Split bounds exceed source image|分割境界が元画像を超えています|분할 경계가 원본을 초과함|La découpe dépasse l’image source|Teilungsgrenzen überschreiten das Original|Los límites superan el original|Os limites excedem o original
+分割图片无效或总量超过 48 MiB|Invalid split images or output exceeds 48 MiB|分割画像が無効か48 MiB超過|분할 이미지 오류 또는 48 MiB 초과|Images invalides ou sortie supérieure à 48 MiB|Ungültige Bilder oder Ausgabe über 48 MiB|Imágenes inválidas o salida superior a 48 MiB|Imagens inválidas ou saída acima de 48 MiB
+本地资源请求无效|Invalid local resource request|ローカルリソース要求が無効|로컬 리소스 요청이 잘못됨|Requête de ressource locale invalide|Ungültige lokale Ressourcenanfrage|Solicitud de recurso local inválida|Solicitação de recurso local inválida
+消息标识无效|Invalid message ID|メッセージIDが無効|메시지 ID가 잘못됨|ID de message invalide|Ungültige Nachrichten-ID|ID de mensaje inválido|ID de mensagem inválido
+消息必须是对象|Message must be an object|メッセージはオブジェクトが必要|메시지는 개체여야 합니다|Le message doit être un objet|Nachricht muss ein Objekt sein|El mensaje debe ser un objeto|A mensagem deve ser um objeto
+消息类型不受支持|Unsupported message type|未対応のメッセージ種類|지원하지 않는 메시지 유형|Type de message non pris en charge|Nicht unterstützter Nachrichtentyp|Tipo de mensaje no compatible|Tipo de mensagem não compatível
+消息缺少 requestId|Message is missing requestId|requestIdがありません|메시지에 requestId 없음|requestId manquant|requestId fehlt|Falta requestId|Falta requestId
+消息缺少 type|Message is missing type|typeがありません|메시지에 type 없음|type manquant|type fehlt|Falta type|Falta type
+`;

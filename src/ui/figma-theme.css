@@ -1,0 +1,239 @@
+/* Figma appearance adapter. Geometry and the MasterGo baseline stay unchanged.
+   Live host tokens win when appearances match; opposite manual themes and browser
+   previews use the matching offline palette. Missing host tokens retain fallbacks. */
+:root, :root[data-theme] {
+  --fallback-bg-brand: #0d99ff;
+  --theme-bg-brand: var(--fallback-bg-brand);
+  --fallback-bg-brand-hover: #007be5;
+  --theme-bg-brand-hover: var(--fallback-bg-brand-hover);
+  --fallback-bg-brand-pressed: #007be5;
+  --theme-bg-brand-pressed: var(--fallback-bg-brand-pressed);
+  --fallback-text-onbrand: #ffffff;
+  --theme-text-onbrand: var(--fallback-text-onbrand);
+  --fallback-bg: #ffffff;
+  --theme-bg: var(--fallback-bg);
+  --fallback-bg-secondary: #f5f5f5;
+  --theme-bg-secondary: var(--fallback-bg-secondary);
+  --fallback-bg-hover: #f5f5f5;
+  --theme-bg-hover: var(--fallback-bg-hover);
+  --fallback-bg-selected: #e5f4ff;
+  --theme-bg-selected: var(--fallback-bg-selected);
+  --fallback-border-selected: #0d99ff;
+  --theme-border-selected: var(--fallback-border-selected);
+  --fallback-bg-pressed: #f5f5f5;
+  --theme-bg-pressed: var(--fallback-bg-pressed);
+  --fallback-text-onselected: #000000e5;
+  --theme-text-onselected: var(--fallback-text-onselected);
+  --fallback-bg-selected-hover: #bde3ff;
+  --theme-bg-selected-hover: var(--fallback-bg-selected-hover);
+  --fallback-bg-selected-pressed: #bde3ff;
+  --theme-bg-selected-pressed: var(--fallback-bg-selected-pressed);
+  --fallback-bg-disabled: #d9d9d9;
+  --theme-bg-disabled: var(--fallback-bg-disabled);
+  --fallback-border: #e6e6e6;
+  --theme-border: var(--fallback-border);
+  --fallback-border-strong: #2c2c2c;
+  --theme-border-strong: var(--fallback-border-strong);
+  --fallback-text: #000000e5;
+  --theme-text: var(--fallback-text);
+  --fallback-text-secondary: #00000080;
+  --theme-text-secondary: var(--fallback-text-secondary);
+  --fallback-text-tertiary: #0000004d;
+  --theme-text-tertiary: var(--fallback-text-tertiary);
+  --fallback-text-disabled: #0000004d;
+  --theme-text-disabled: var(--fallback-text-disabled);
+  --fallback-border-disabled: #e6e6e6;
+  --theme-border-disabled: var(--fallback-border-disabled);
+  --fallback-text-brand: #007be5;
+  --theme-text-brand: var(--fallback-text-brand);
+  --fallback-icon: #000000e5;
+  --theme-icon: var(--fallback-icon);
+  --fallback-text-success: #009951;
+  --theme-text-success: var(--fallback-text-success);
+  --fallback-bg-success-tertiary: #cff7d3;
+  --theme-bg-success-tertiary: var(--fallback-bg-success-tertiary);
+  --fallback-border-success: #aff4c6;
+  --theme-border-success: var(--fallback-border-success);
+  --fallback-text-warning: #b86200;
+  --theme-text-warning: var(--fallback-text-warning);
+  --fallback-bg-warning-tertiary: #fff1c2;
+  --theme-bg-warning-tertiary: var(--fallback-bg-warning-tertiary);
+  --fallback-border-warning: #ffe8a3;
+  --theme-border-warning: var(--fallback-border-warning);
+  --fallback-bg-danger: #f24822;
+  --theme-bg-danger: var(--fallback-bg-danger);
+  --fallback-bg-danger-hover: #dc3412;
+  --theme-bg-danger-hover: var(--fallback-bg-danger-hover);
+  --fallback-bg-danger-pressed: #dc3412;
+  --theme-bg-danger-pressed: var(--fallback-bg-danger-pressed);
+  --fallback-bg-danger-tertiary: #ffe2e0;
+  --theme-bg-danger-tertiary: var(--fallback-bg-danger-tertiary);
+  --fallback-border-danger: #ffc7c2;
+  --theme-border-danger: var(--fallback-border-danger);
+  --fallback-bg-brand-tertiary: #e5f4ff;
+  --theme-bg-brand-tertiary: var(--fallback-bg-brand-tertiary);
+  --fallback-border-brand: #bde3ff;
+  --theme-border-brand: var(--fallback-border-brand);
+  --fallback-bg-tertiary: #e6e6e6;
+  --theme-bg-tertiary: var(--fallback-bg-tertiary);
+  --primary: var(--theme-bg-brand);
+  --primary-hover: var(--theme-bg-brand-hover);
+  --primary-pressed: var(--theme-bg-brand-pressed);
+  --on-primary: var(--theme-text-onbrand);
+  --bg: var(--theme-bg);
+  --surface: var(--theme-bg);
+  --surface-raised: var(--theme-bg);
+  --surface-soft: var(--theme-bg-secondary);
+  --surface-subtle: var(--theme-bg-secondary);
+  --surface-hover: var(--theme-bg-hover);
+  --surface-active: var(--theme-bg-selected);
+  --control-active-line: var(--theme-border-selected);
+  --control-bg: var(--theme-bg-secondary);
+  --control-hover: var(--theme-bg-hover);
+  --control-pressed: var(--theme-bg-pressed);
+  --selected-text: var(--theme-text-onselected);
+  --selected-hover: var(--theme-bg-selected-hover);
+  --selected-pressed: var(--theme-bg-selected-pressed);
+  --control-disabled: var(--theme-bg-disabled);
+  --popover: var(--theme-bg);
+  --line: var(--theme-border);
+  --line-strong: var(--theme-border-strong);
+  --text: var(--theme-text);
+  --muted: var(--theme-text-secondary);
+  --weak: var(--theme-text-tertiary);
+  --disabled-text: var(--theme-text-disabled);
+  --disabled-line: var(--theme-border-disabled);
+  --accent-text: var(--theme-text-brand);
+  --icon-color: var(--theme-icon);
+  --success: var(--theme-text-success);
+  --success-soft: var(--theme-bg-success-tertiary);
+  --success-line: var(--theme-border-success);
+  --warning: var(--theme-text-warning);
+  --warning-text: var(--theme-text-warning);
+  --warning-soft: var(--theme-bg-warning-tertiary);
+  --warning-line: var(--theme-border-warning);
+  --danger: var(--theme-bg-danger);
+  --danger-hover: var(--theme-bg-danger-hover);
+  --danger-active: var(--theme-bg-danger-pressed);
+  --danger-soft: var(--theme-bg-danger-tertiary);
+  --danger-line: var(--theme-border-danger);
+  --info-soft: var(--theme-bg-brand-tertiary);
+  --info-line: var(--theme-border-brand);
+  --focus-ring: var(--theme-border-selected);
+  --floating-bg: var(--theme-bg);
+  --resize-line: var(--theme-border-strong);
+  --status-neutral: var(--theme-border);
+  --status-neutral-soft: var(--theme-bg-secondary);
+  --checker-bg: var(--theme-bg-secondary);
+  --checker-square: var(--theme-bg-tertiary);
+  --checker-thumb-bg: var(--theme-bg-secondary);
+  --checker-thumb-square: var(--theme-bg-tertiary);
+}
+
+:root[data-theme="dark"], :root.figma-dark:not([data-theme]) {
+  --fallback-bg-brand: #0c8ce9;
+  --fallback-bg-brand-hover: #0a6dc2;
+  --fallback-bg-brand-pressed: #0a6dc2;
+  --fallback-text-onbrand: #ffffff;
+  --fallback-bg: #2c2c2c;
+  --fallback-bg-secondary: #383838;
+  --fallback-bg-hover: #383838;
+  --fallback-bg-selected: #4a5878;
+  --fallback-border-selected: #0c8ce9;
+  --fallback-bg-pressed: #383838;
+  --fallback-text-onselected: #ffffff;
+  --fallback-bg-selected-hover: #536383;
+  --fallback-bg-selected-pressed: #536383;
+  --fallback-bg-disabled: #757575;
+  --fallback-border: #444444;
+  --fallback-border-strong: #ffffffb2;
+  --fallback-text: #ffffff;
+  --fallback-text-secondary: #ffffffb2;
+  --fallback-text-tertiary: #ffffff66;
+  --fallback-text-disabled: #ffffff66;
+  --fallback-border-disabled: #444444;
+  --fallback-text-brand: #7cc4ff;
+  --fallback-icon: #ffffff;
+  --fallback-text-success: #79d297;
+  --fallback-bg-success-tertiary: #245b36;
+  --fallback-border-success: #0c5a31;
+  --fallback-text-warning: #f7d15f;
+  --fallback-bg-warning-tertiary: #5c4100;
+  --fallback-border-warning: #7a5c0d;
+  --fallback-bg-danger: #e03e1a;
+  --fallback-bg-danger-hover: #c4381c;
+  --fallback-bg-danger-pressed: #c4381c;
+  --fallback-bg-danger-tertiary: #7c2622;
+  --fallback-border-danger: #a32e25;
+  --fallback-bg-brand-tertiary: #183b5c;
+  --fallback-border-brand: #0c6ec4;
+  --fallback-bg-tertiary: #444444;
+}
+
+:root[data-theme-source="host"], :root:not([data-theme]) {
+  --theme-bg-brand: var(--figma-color-bg-brand, var(--fallback-bg-brand));
+  --theme-bg-brand-hover: var(--figma-color-bg-brand-hover, var(--fallback-bg-brand-hover));
+  --theme-bg-brand-pressed: var(--figma-color-bg-brand-pressed, var(--fallback-bg-brand-pressed));
+  --theme-text-onbrand: var(--figma-color-text-onbrand, var(--fallback-text-onbrand));
+  --theme-bg: var(--figma-color-bg, var(--fallback-bg));
+  --theme-bg-secondary: var(--figma-color-bg-secondary, var(--fallback-bg-secondary));
+  --theme-bg-hover: var(--figma-color-bg-hover, var(--fallback-bg-hover));
+  --theme-bg-selected: var(--figma-color-bg-selected, var(--fallback-bg-selected));
+  --theme-border-selected: var(--figma-color-border-selected, var(--fallback-border-selected));
+  --theme-bg-pressed: var(--figma-color-bg-pressed, var(--fallback-bg-pressed));
+  --theme-text-onselected: var(--figma-color-text-onselected, var(--fallback-text-onselected));
+  --theme-bg-selected-hover: var(--figma-color-bg-selected-hover, var(--fallback-bg-selected-hover));
+  --theme-bg-selected-pressed: var(--figma-color-bg-selected-pressed, var(--fallback-bg-selected-pressed));
+  --theme-bg-disabled: var(--figma-color-bg-disabled, var(--fallback-bg-disabled));
+  --theme-border: var(--figma-color-border, var(--fallback-border));
+  --theme-border-strong: var(--figma-color-border-strong, var(--fallback-border-strong));
+  --theme-text: var(--figma-color-text, var(--fallback-text));
+  --theme-text-secondary: var(--figma-color-text-secondary, var(--fallback-text-secondary));
+  --theme-text-tertiary: var(--figma-color-text-tertiary, var(--fallback-text-tertiary));
+  --theme-text-disabled: var(--figma-color-text-disabled, var(--fallback-text-disabled));
+  --theme-border-disabled: var(--figma-color-border-disabled, var(--fallback-border-disabled));
+  --theme-text-brand: var(--figma-color-text-brand, var(--fallback-text-brand));
+  --theme-icon: var(--figma-color-icon, var(--fallback-icon));
+  --theme-text-success: var(--figma-color-text-success, var(--fallback-text-success));
+  --theme-bg-success-tertiary: var(--figma-color-bg-success-tertiary, var(--fallback-bg-success-tertiary));
+  --theme-border-success: var(--figma-color-border-success, var(--fallback-border-success));
+  --theme-text-warning: var(--figma-color-text-warning, var(--fallback-text-warning));
+  --theme-bg-warning-tertiary: var(--figma-color-bg-warning-tertiary, var(--fallback-bg-warning-tertiary));
+  --theme-border-warning: var(--figma-color-border-warning, var(--fallback-border-warning));
+  --theme-bg-danger: var(--figma-color-bg-danger, var(--fallback-bg-danger));
+  --theme-bg-danger-hover: var(--figma-color-bg-danger-hover, var(--fallback-bg-danger-hover));
+  --theme-bg-danger-pressed: var(--figma-color-bg-danger-pressed, var(--fallback-bg-danger-pressed));
+  --theme-bg-danger-tertiary: var(--figma-color-bg-danger-tertiary, var(--fallback-bg-danger-tertiary));
+  --theme-border-danger: var(--figma-color-border-danger, var(--fallback-border-danger));
+  --theme-bg-brand-tertiary: var(--figma-color-bg-brand-tertiary, var(--fallback-bg-brand-tertiary));
+  --theme-border-brand: var(--figma-color-border-brand, var(--fallback-border-brand));
+  --theme-bg-tertiary: var(--figma-color-bg-tertiary, var(--fallback-bg-tertiary));
+}
+
+:root.figma-dark:not([data-theme]) { color-scheme: dark; }
+:root.figma-light:not([data-theme]) { color-scheme: light; }
+
+.app-shell .btn.primary:active:not(:disabled) {
+  background: var(--primary-pressed);
+  border-color: var(--primary-pressed);
+}
+.app-shell .btn:is(.active,[aria-pressed="true"]):not(.primary):not(.danger),
+.app-shell .tool-card:hover .tool-card-icon,
+.app-shell .tool-card:focus-visible .tool-card-icon,
+.app-shell .tool-card:hover .tool-card-copy strong,
+.app-shell .tool-card:focus-visible .tool-card-copy strong,
+.app-shell .tag.primary, .app-shell .message-notice-bar { color: var(--accent-text); }
+.app-shell .select-option.is-selected { color: var(--selected-text); }
+.app-shell .btn:active:not(.primary):not(.danger):not(:disabled) { background: var(--control-pressed); }
+.app-shell .btn:is(.active,[aria-pressed="true"]):hover:not(.primary):not(.danger):not(:disabled),
+.app-shell .select-option.is-selected:hover { background: var(--selected-hover); }
+.app-shell .btn:is(.active,[aria-pressed="true"]):active:not(.primary):not(.danger):not(:disabled) { background: var(--selected-pressed); }
+.app-shell .tool-card-icon { color: var(--icon-color); }
+.app-shell .btn:disabled, .app-shell .icon-btn:disabled,
+.app-shell .btn:disabled:hover, .app-shell .btn:disabled:active,
+.app-shell input:disabled, .app-shell textarea:disabled, .app-shell .select-trigger:disabled {
+  color: var(--disabled-text);
+  border-color: var(--disabled-line);
+  background: var(--control-disabled);
+}
+.app-shell :is(input,textarea)::placeholder { color: var(--weak); }

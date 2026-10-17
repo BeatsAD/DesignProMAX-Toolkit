@@ -1,0 +1,8 @@
+import {recognizeDetailed} from '../../image/process';
+import {normalizeRecognizedText,type TextRecognitionResult} from '../shared/text-recognition';
+let active:AbortController|undefined;
+export function terminateTextRecognitionWorker(_reason?:string){active?.abort();active=undefined;}
+export async function recognizeTextFromImage(source:{imageBytes:Uint8Array|number[];mimeType:string},progress:(text:string)=>void=()=>{},signal?:AbortSignal):Promise<TextRecognitionResult>{
+ terminateTextRecognitionWorker();const controller=new AbortController();active=controller;const cancel=()=>controller.abort();signal?.addEventListener('abort',cancel,{once:true});if(signal?.aborted)controller.abort();const start=performance.now();
+ try{const data=await recognizeDetailed({nodeId:'ocr',name:'OCR',bytes:Array.from(source.imageBytes),fingerprint:'',width:0,height:0,mimeType:source.mimeType},controller.signal,p=>progress(`正在识别文字 ${Math.round(p*100)}%`));const text=normalizeRecognizedText(data.text);const clamp=(n:number)=>Math.max(0,Math.min(100,Math.round(n)));const lines=data.lines.length?data.lines.map(line=>({text:normalizeRecognizedText(line.text.trim()),confidence:clamp(line.confidence)})).filter(line=>line.text):text.split('\n').filter(Boolean).map(text=>({text,confidence:clamp(data.confidence)}));return{fullText:text,lines,averageConfidence:lines.length?Math.round(lines.reduce((sum,line)=>sum+line.confidence,0)/lines.length):clamp(data.confidence),lowConfidenceLineIndexes:lines.flatMap((line,index)=>line.confidence<70?[index]:[]),durationMs:performance.now()-start};}finally{signal?.removeEventListener('abort',cancel);if(active===controller)active=undefined;}
+}

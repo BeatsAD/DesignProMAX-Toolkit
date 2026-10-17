@@ -1,0 +1,35 @@
+{
+  "name": "designpromax-figma-toolbox",
+  "version": "0.3.2",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "tsc -p tsconfig.main.json --noEmit && tsc -p tsconfig.ui.json --noEmit",
+    "build": "npm run lint && node scripts/build.mjs && npm run check:locales",
+    "test": "npm run build && node --test tests/*.check.mjs",
+    "verify:isolation": "node scripts/verify-isolation.mjs",
+    "verify": "npm test && npm run verify:isolation",
+    "configure:plugin": "node scripts/configure-plugin.mjs",
+    "dev": "npm run build && node scripts/preview-server.mjs",
+    "preview": "node scripts/preview-server.mjs",
+    "check:locales": "node scripts/audit-live-locales.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "lucide-react": "0.468.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "tesseract.js": "5.1.1"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "1.142.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "esbuild": "0.25.12",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

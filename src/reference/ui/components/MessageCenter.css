@@ -1,0 +1,80 @@
+.home-message-notice { flex: 1 1 0; min-width: 0; }
+.home-page-head .home-layout-toolbar { flex: 0 0 auto; }
+.message-notice-bar {
+  display: flex; align-items: center; width: 100%; min-width: 0;
+  min-height: var(--control-height); gap: var(--space-3);
+  border: 1px solid var(--info-line); border-radius: var(--radius-control);
+  padding: 4px 8px; background: var(--info-soft); color: var(--text);
+  font: inherit; font-size: var(--font-size-emphasis); text-align: left; cursor: pointer;
+}
+.message-notice-bar:hover:not(:disabled) { background: var(--surface-active); border-color: var(--primary); }
+.message-notice-bar:focus-visible, .message-center-tabs button:focus-visible,
+.message-item-heading button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.message-notice-bar:disabled { cursor: default; }
+.message-notice-icon { position: relative; display: flex; flex: 0 0 auto; color: var(--primary-hover); }
+.message-unread-dot { position: absolute; right: -3px; top: -3px; width: 4px; height: 4px; border-radius: 50%; background: var(--primary-hover); }
+.message-notice-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1 1 auto; }
+.message-notice-chevron { flex: 0 0 auto; color: var(--muted); }
+.compact-dock .topbar-left { flex: 1 1 0; }
+.compact-dock .topbar-right { flex: 0 0 auto; flex-wrap: nowrap; }
+.topbar .message-notice-bar span { margin: 0; color: inherit; font-size: inherit; }
+.topbar .message-notice-icon { color: var(--primary-hover); }
+.message-center-dialog {
+  display: flex; flex-direction: column; width: 360px; max-width: 100%;
+  height: min(640px, calc(100vh - var(--dialog-inset) - var(--dialog-inset)));
+  max-height: 100%; min-height: 0; overflow: hidden;
+  background: var(--popover); color: var(--text); border: 1px solid var(--line);
+  border-radius: 10px; box-shadow: var(--shadow-modal);
+  animation: modal-content-enter var(--motion-standard) var(--motion-ease-out) both;
+}
+.message-center-header { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 12px 16px 8px; }
+.message-center-header h2 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 16px; font-weight: 650; line-height: 24px; }
+.message-center-header h2 svg { color: var(--primary-hover); }
+.message-center-header .icon-btn { flex: 0 0 auto; border-color: transparent; background: transparent; }
+.message-center-tabs { flex: 0 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 0 16px; border-bottom: 1px solid var(--line); }
+.message-center-tabs button { position: relative; border: 0; border-bottom: 2px solid transparent; padding: 10px 0; background: transparent; color: var(--muted); font: inherit; font-size: 14px; white-space: nowrap; cursor: pointer; }
+.message-center-tabs button[aria-selected="true"] { color: var(--primary-hover); font-weight: 600; border-bottom-color: var(--primary-hover); }
+.message-center-tabs button:hover { color: var(--text); }
+.message-center-scroll { flex: 1 1 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 16px; scrollbar-width: thin; }
+.message-center-scroll:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: -2px; }
+.message-center-item + .message-center-item { border-top: 1px solid var(--line); }
+.message-item-heading { margin: 0; font: inherit; }
+.message-item-heading button { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; border: 0; background: transparent; color: var(--text); width: 100%; padding: 14px 0; text-align: left; font: inherit; cursor: pointer; }
+.message-item-heading button > svg { flex: 0 0 auto; margin-top: 3px; color: var(--muted); }
+.message-item-heading button > svg.is-expanded { transform: rotate(180deg); }
+.message-item-copy { display: grid; gap: 5px; min-width: 0; }
+.message-item-title { font-size: 16px; line-height: 24px; font-weight: 600; overflow-wrap: anywhere; }
+.message-item-date { color: var(--muted); font-size: 12px; font-weight: 400; line-height: 16px; }
+.message-version-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; font-size: 14px; line-height: 20px; }
+.message-current-version { color: var(--primary-hover); font-size: 10px; font-weight: 400; }
+.message-new-badge { display: inline-block; vertical-align: 2px; margin-left: 8px; padding: 0 4px; border: 1px solid var(--danger-line); border-radius: 4px; background: var(--danger-soft); color: var(--danger); white-space: nowrap; }
+.message-item-body { padding-bottom: 14px; font-size: 13px; line-height: 22px; overflow-wrap: anywhere; }
+.message-item-body section + section { margin-top: 12px; }
+.message-item-body h4 { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.message-item-body p { margin: 0 0 6px; }
+.message-item-body ul, .message-item-body ol { margin: 0; padding-left: 18px; }
+.message-item-body li + li { margin-top: 4px; }
+.message-center-footer { flex: 0 0 auto; display: flex; justify-content: flex-end; border-top: 1px solid var(--line); padding: 10px 16px; }
+.message-center-footer .btn { min-width: 76px; }
+.message-center-empty { display: grid; place-items: center; height: 100%; margin: 0; color: var(--muted); text-align: center; }
+.message-window-error { position: fixed; z-index: 100; bottom: 8px; left: 8px; right: 8px; padding: 8px; border: 1px solid var(--warning-line); border-radius: 8px; background: var(--surface-raised); color: var(--warning-text); font-size: 12px; box-shadow: var(--shadow-popover); }
+@media (prefers-reduced-motion: reduce) { .message-center-dialog { animation: none; } }
+
+/* The shell normalizes all descendants with !important typography rules.
+ * Scope the reading scale to this dialog; keep existing tool UI and regular
+ * font-weight contract unchanged. */
+.app-shell .message-center-dialog {
+  --font-size-body: 13px;
+  --line-height-body: 22px;
+  --font-size-emphasis: 16px;
+  --line-height-emphasis: 24px;
+  --font-size-meta: 12px;
+  --line-height-meta: 18px;
+}
+.app-shell .message-center-dialog .message-item-title { font-size: var(--font-size-emphasis) !important; line-height: var(--line-height-emphasis) !important; }
+.app-shell .message-center-dialog .message-center-tabs button { font-size: 14px !important; line-height: 20px !important; }
+.app-shell .message-center-dialog .message-item-date { font-size: var(--font-size-meta) !important; line-height: var(--line-height-meta) !important; }
+.app-shell .message-center-dialog .message-current-version,
+.app-shell .message-center-dialog .message-new-badge { font-size: 11px !important; line-height: 16px !important; }
+.app-shell .message-center-dialog .message-center-footer .btn { font-size: 13px !important; line-height: 20px !important; }
+.app-shell .message-notice-bar .message-notice-title { font-size: var(--font-size-emphasis) !important; line-height: 18px !important; }

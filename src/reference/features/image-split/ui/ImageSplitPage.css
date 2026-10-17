@@ -1,0 +1,58 @@
+.image-split-page { display: grid; gap: var(--space-3); min-width: 0; align-content: start; }
+.image-split-page p { margin: 0; }
+.app-shell .image-split-page .image-split-meta, .image-split-page .image-split-meta { font-size: var(--font-size-meta) !important; line-height: var(--line-height-meta) !important; color: var(--muted); }
+.image-split-page input[type=number] { width: 100%; min-width: 0; height: 28px; box-sizing: border-box; }
+.image-split-settings { display: flex; align-items: end; gap: var(--space-3); }
+.image-split-settings .field { flex: 1; margin: 0; }
+.image-split-unit { display: flex; gap: var(--space-1); align-items: center; }
+.image-split-unit > span { color: var(--muted); }
+.image-split-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.image-split-fields .field { margin: 0; }
+.image-split-actions, .image-split-toolbar { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+.image-split-toolbar { margin-bottom: var(--space-3); gap: var(--space-1); }
+.image-split-toolbar > .btn { margin-left: auto; }
+.image-split-end { justify-content: flex-end; margin-top: var(--space-3); }
+.image-split-viewport { overflow: auto; max-height: 480px; background: var(--surface-subtle); border-radius: var(--radius-control); }
+.image-split-stage { position: relative; min-width: 0; touch-action: none; }
+.image-split-stage > img { width: 100%; height: 100%; display: block; pointer-events: none; }
+.image-split-stage.is-drawing { cursor: crosshair; }
+.image-split-stage.is-drawing .image-split-overlay { pointer-events: none; }
+.image-split-page .image-split-overlay { position: absolute; background: transparent; padding: 0; border: 1px solid var(--primary); border-radius: 0; min-height: 0; height: auto; color: var(--primary); cursor: pointer; touch-action: none; }
+.image-split-page .image-split-overlay.is-active { background: color-mix(in srgb, var(--primary) 8%, transparent); border-width: 2px; cursor: move; }
+.image-split-overlay .image-split-number { position: absolute; left: 0; top: 0; background: var(--primary); color: var(--on-primary); padding: var(--space-1); line-height: var(--line-height-meta); }
+.image-split-new-box { position: absolute; border: 1px dashed var(--primary); background: color-mix(in srgb, var(--primary) 8%, transparent); pointer-events: none; }
+.image-split-editor { display: grid; gap: var(--space-3); margin-top: var(--space-3); padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-control); }
+.image-split-editor details > .image-split-actions { margin-top: var(--space-3); }
+.image-split-editor summary { cursor: pointer; min-height: 28px; display: list-item; }
+.image-split-merge { display: flex; align-items: end; gap: var(--space-3); margin-top: var(--space-3); }
+.image-split-merge .field { flex: 1; margin: 0; }
+.image-split-select-all { display: flex; align-items: center; gap: var(--space-3); margin: var(--space-3) 0; color: var(--muted); }
+.image-split-region-list { display: grid; gap: var(--space-1); max-height: 200px; overflow: auto; }
+.image-split-region-row { display: flex; gap: var(--space-3); align-items: center; }
+.image-split-region-row button { height: 28px; flex: 1; min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); text-align: left; padding: 0 var(--space-3); border-radius: var(--radius-control); background: var(--surface-subtle); border: 1px solid var(--line); color: var(--text); }
+.image-split-region-row button[aria-pressed=true] { border-color: var(--control-active-line); }
+.image-split-results { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+.image-split-results article { min-width: 0; display: grid; grid-template-columns: 14px 60px minmax(0, 1fr); gap: var(--space-1); align-items: center; padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface); }
+.image-split-page .image-split-thumb { height: 52px; min-height: 0; width: 60px; border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface-subtle); padding: 0; cursor: zoom-in; overflow: hidden; }
+.image-split-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.image-split-result-copy { display: grid; min-width: 0; gap: var(--space-1); align-content: center; }
+.image-split-result-copy .tag { justify-self: start; }
+.image-split-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.image-split-result-error { color: var(--danger); overflow-wrap: anywhere; }
+.image-split-zoom { max-width: 90vw; max-height: 90vh; padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-control); background: var(--surface); color: var(--text); }
+.image-split-zoom img { display: block; max-width: 85vw; max-height: 75vh; margin-top: var(--space-3); object-fit: contain; }
+.image-split-zoom::backdrop { background: rgb(0 0 0 / 60%); }
+.image-split-page *, .image-split-zoom * { font-weight: var(--font-weight-regular); }
+.image-split-page button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.image-split-overlay .image-split-handle { position: absolute; width: 28px; height: 28px; padding: 0; background: transparent; display: grid; place-items: center; }
+.image-split-handle::after { content: ''; width: 8px; height: 8px; background: var(--surface); border: 1px solid var(--primary); }
+.image-split-handle[data-edge=tl] { left: -14px; top: -14px; cursor: nwse-resize; }
+.image-split-handle[data-edge=tr] { left: auto; right: -14px; top: -14px; cursor: nesw-resize; }
+.image-split-handle[data-edge=bl] { top: auto; left: -14px; bottom: -14px; cursor: nesw-resize; }
+.image-split-handle[data-edge=br] { left: auto; top: auto; right: -14px; bottom: -14px; cursor: nwse-resize; }
+@media (min-width: 820px) {
+  .image-split-page.has-source { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .image-split-page.has-source > .two-col { grid-column: 1; grid-row: 1 / span 3; grid-template-columns: minmax(0, 1fr); }
+  .image-split-page.has-source > .panel { grid-column: 2; }
+  .image-split-page.has-source > .btn { grid-column: 1 / -1; }
+}

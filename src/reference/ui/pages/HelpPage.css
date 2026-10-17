@@ -1,0 +1,371 @@
+.help-page.settings-subpage {
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-section,
+.help-page .help-manual-browser,
+.help-page .help-manual-index,
+.help-page .help-manual-detail-panel,
+.help-page .help-manual-detail-heading,
+.help-page .help-manual-detail-content,
+.help-page .help-manual-detail-list {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.help-page .help-manual-detail-heading h3,
+.help-page .help-manual-detail-list h4 {
+  margin: 0;
+  color: var(--text);
+}
+
+.help-page .help-guide-disclosure span,
+.help-page .help-manual-detail-heading p,
+.help-page .help-manual-detail-empty span {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.help-page .help-guide-disclosure {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid var(--info-line);
+  border-radius: var(--radius-control);
+  background: var(--info-soft);
+}
+
+.help-page .help-guide-disclosure strong {
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.help-page .help-manual-browser {
+  align-items: start;
+}
+
+.help-page .help-manual-index {
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+}
+
+.help-page .help-manual-index-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0 var(--space-1);
+}
+
+.help-page .help-manual-index-heading strong {
+  color: var(--text);
+  font-weight: var(--font-weight-regular);
+}
+
+.help-page .help-manual-index-heading span {
+  color: var(--weak);
+  font-size: var(--font-size-meta);
+}
+
+.help-page .help-manual-index-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-index-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  min-height: 3rem;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.help-page .help-manual-index-item:hover,
+.help-page .help-manual-index-item.is-selected {
+  border-color: var(--info-line);
+  background: var(--info-soft);
+  color: var(--primary);
+}
+
+.help-page .help-manual-index-item:focus-visible,
+.help-page .help-index-return:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.help-page .help-manual-index-item > span:not(.status-tag) {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-weight: var(--font-weight-regular);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.help-page .help-manual-index-item .status-tag {
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+.help-page .help-manual-detail-empty,
+.help-page .help-manual-detail-panel {
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+}
+
+.help-page .help-manual-detail-empty {
+  display: none;
+}
+
+.help-page .help-index-return {
+  display: inline-flex;
+  justify-self: start;
+  align-items: center;
+  min-height: var(--control-height);
+  gap: var(--space-3);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--surface-subtle);
+  color: var(--primary);
+  font: inherit;
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+}
+
+.help-page .help-manual-detail-heading {
+  grid-template-columns: var(--control-height) minmax(0, 1fr);
+  align-items: start;
+}
+
+.help-page .help-manual-detail-icon {
+  display: inline-grid;
+  width: var(--control-height);
+  height: var(--control-height);
+  place-items: center;
+  border-radius: var(--radius-control);
+  background: var(--info-soft);
+  color: var(--primary);
+}
+
+.help-page .help-manual-detail-heading > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.help-page .help-manual-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-detail-heading h3 {
+  font-size: var(--font-size-emphasis);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-emphasis);
+}
+
+.help-page .help-manual-detail-list {
+  align-content: start;
+  gap: var(--space-1);
+}
+
+.help-page .help-manual-detail-list h4 {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.help-page .help-manual-detail-list-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.help-page .help-manual-detail-list-icon {
+  display: inline-grid;
+  width: var(--line-height-body);
+  height: var(--line-height-body);
+  flex: 0 0 auto;
+  place-items: center;
+  color: var(--primary);
+}
+
+.help-page .help-manual-detail-count {
+  margin-left: auto;
+  color: var(--weak);
+  font-size: var(--font-size-meta);
+  line-height: var(--line-height-meta);
+}
+
+.help-page .help-manual-detail-items {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  list-style: none;
+}
+
+.help-page .help-manual-detail-items li {
+  display: grid;
+  align-items: start;
+  min-width: 0;
+}
+
+.help-page .help-manual-detail-item-marker {
+  display: inline-grid;
+  width: var(--line-height-body);
+  height: var(--line-height-body);
+  align-self: start;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.help-page .help-manual-detail-list.is-steps {
+  --help-manual-step-marker-size: 20px;
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-detail-list.is-steps .help-manual-detail-items li {
+  grid-template-columns: var(--help-manual-step-marker-size) minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-detail-list.is-steps .help-manual-detail-item-marker {
+  width: var(--help-manual-step-marker-size);
+  height: var(--help-manual-step-marker-size);
+  transform: translateY(calc((var(--line-height-body) - var(--help-manual-step-marker-size)) / 2));
+  border: 1px solid var(--info-line);
+  border-radius: 999px;
+  background: var(--info-soft);
+  color: var(--primary);
+  font-size: var(--font-size-meta);
+  line-height: var(--line-height-meta);
+}
+
+.help-page .help-manual-detail-list.is-prerequisite,
+.help-page .help-manual-detail-list.is-notes {
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--surface-subtle);
+}
+
+.help-page .help-manual-detail-list.is-prerequisite {
+  border-color: var(--info-line);
+  background: var(--info-soft);
+}
+
+.help-page .help-manual-detail-list.is-prerequisite .help-manual-detail-items li,
+.help-page .help-manual-detail-list.is-notes .help-manual-detail-items li {
+  grid-template-columns: var(--line-height-body) minmax(0, 1fr);
+  gap: var(--space-1);
+}
+
+.help-page .help-manual-detail-list.is-prerequisite .help-manual-detail-item-marker::before,
+.help-page .help-manual-detail-list.is-notes .help-manual-detail-item-marker::before {
+  width: var(--space-1);
+  height: var(--space-1);
+  border-radius: 999px;
+  background: var(--primary);
+  content: '';
+}
+
+.help-page .help-manual-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.help-page .help-manual-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.help-page .help-manual-actions button {
+  flex: 1 1 0;
+  justify-content: center;
+}
+
+.help-page .help-manual-section.has-selection .help-manual-index {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .help-page .help-manual-browser {
+    grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
+  }
+
+  .help-page .help-manual-section.has-selection .help-manual-index {
+    display: grid;
+  }
+
+  .help-page .help-manual-detail-empty {
+    display: grid;
+    min-height: 100%;
+    align-content: center;
+    justify-items: start;
+  }
+
+  .help-page .help-index-return {
+    display: none;
+  }
+
+  .help-page .help-manual-detail-content {
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, 0.7fr);
+    align-items: start;
+  }
+
+  .help-page .help-manual-detail-list.is-steps {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .help-page .help-manual-detail-list.is-prerequisite {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .help-page .help-manual-detail-list.is-notes {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .help-page .help-manual-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+
+  .help-page .help-manual-actions button {
+    flex: 0 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-page .help-manual-index-item {
+    transition: none;
+  }
+}

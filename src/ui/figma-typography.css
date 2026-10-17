@@ -1,0 +1,43 @@
+/* Figma typography adapter. Keep the recorded MasterGo stylesheet unchanged.
+ * Retain the 10/11/12px scale and line heights for narrow, localized windows.
+ * Current Figma desktop samples use 450 for regular UI and 550 for emphasis.
+ */
+:root {
+  --font-weight-regular: 450;
+  --font-weight-emphasis: 550;
+  font-weight: var(--font-weight-regular);
+}
+
+/* The reference blanket rule assigns a weight to every descendant, so an
+ * emphasized container must also restore the weight of its nested labels.
+ */
+.app-shell :is(
+  strong,
+  b,
+  h1,
+  h2,
+  h3,
+  h4,
+  .text-fill-rule-title,
+  .feedback-contact-value,
+  .btn.primary,
+  .btn.danger
+),
+.app-shell :is(
+  strong,
+  b,
+  h1,
+  h2,
+  h3,
+  h4,
+  .text-fill-rule-title,
+  .feedback-contact-value,
+  .btn.primary,
+  .btn.danger
+) * {
+  font-weight: var(--font-weight-emphasis) !important;
+}
+
+.language-start h2 {
+  font-weight: var(--font-weight-emphasis);
+}
