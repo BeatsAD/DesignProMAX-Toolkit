@@ -29,9 +29,10 @@ Documentation-only changes that do not affect build inputs need link, command, a
 - Keep changes focused; explain the problem, resulting behavior, and checks.
 - Keep eight UI languages in sync. Load new resources when needed rather than on startup.
 - Preserve settings and document data.
-- Do not rerun historical `migrate-reference-ui.mjs` or `prune-retired-reference-data.mjs` over maintained source. Normal builds use the independent source already here.
+- Normal builds use the maintained independent source. Internal acceptance records and historical migration tools are local-only and are not setup steps.
 - Exclude keys, customer files, unreviewed screenshots, machine paths, dependencies, generated builds, QA output, local manifests, registered bundles, and local/internal instruction/specification files.
-- Use synthetic sample documents in screenshots and tests.
+- Use synthetic sample documents and plugin IDs in screenshots and tests; never copy account-specific development configuration.
+- Use a GitHub-verified noreply address for commits and web merges. Before merging with the CLI, pass `gh pr merge --merge --author-email YOUR_VERIFIED_NOREPLY_EMAIL`; check your GitHub email privacy settings before merging in the web UI. Source edits do not remove personal metadata already present in Git history.
 - Retain third-party notices and asset provenance.
 
 No review deadline or release date is promised. Follow [SECURITY.md](SECURITY.md) for private vulnerability reporting.
@@ -40,4 +41,4 @@ No review deadline or release date is promised. Follow [SECURITY.md](SECURITY.md
 
 较大的行为或依赖改动请先在 Issue 讨论；PR 保持聚焦，说明修改前后行为与验证结果。运行时、依赖或构建改动通过 `npm run verify`；文档改动核对链接、命令和差异即可。
 
-不要提交密钥、客户资料、原始验收输出、本机注册插件、依赖和构建目录。新增资源按需加载，保留用户设置和文档状态。八语词条同步维护；浏览器、自动检查与真实 Figma 验收分别说明。正常开发不需要重新执行历史迁移脚本。
+不要提交密钥、客户资料、原始验收输出、本机注册插件、依赖和构建目录。新增资源按需加载，保留用户设置和文档状态。八语词条同步维护；浏览器、自动检查与真实 Figma 验收分别说明。内部过程记录和历史迁移脚本仅在本机保留。测试使用虚构插件 ID；提交和合并使用 GitHub noreply 邮箱，网页合并前检查账号邮箱隐私设置。

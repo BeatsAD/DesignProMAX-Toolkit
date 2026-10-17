@@ -15,3 +15,24 @@ SPEC.md
 /DesignProMAX-plugin-v1.0.0/
 /mastergo-plugin-package/
 /public/vector-map-geometries/
+
+# Local-only engineering records and historical migration tools
+/docs/DEVELOPMENT_PLAN.md
+/docs/IMPLEMENTATION_STATUS.md
+/docs/BROWSER_ACCEPTANCE.md
+/docs/NATIVE_FIGMA_ACCEPTANCE.md
+/docs/LANGUAGE_ACCEPTANCE.md
+/docs/LOCALIZATION_REVIEW_20261017.md
+/docs/RELIABILITY_FIX_20261017.md
+/docs/DIAGNOSTIC_EXPORT_PRIVACY.md
+/docs/TAG_CLEANUP.md
+/docs/DIALOG_COPY_CLEANUP.md
+/docs/TEXT_FILL_CUSTOM_ONLY.md
+/docs/DESIGN_CONSISTENCY.md
+/docs/UI_RESTORATION.md
+/docs/FIGMA_THEME.md
+/docs/FIGMA_TYPOGRAPHY.md
+/docs/WINDOW_380.md
+/docs/BANNER_ASSET.md
+/scripts/migrate-reference-ui.mjs
+/scripts/prune-retired-reference-data.mjs

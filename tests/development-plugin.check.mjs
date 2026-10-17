@@ -12,7 +12,8 @@ async function fixture() {
   const folder = resolve(root, 'DesignProMAX Toolkit');
   await mkdir(folder);
   await mkdir(resolve(root, 'dist'));
-  const local = { name: 'Test', id: '1692829640748273555', main: 'dist/main.js', ui: 'dist/ui.html' };
+  // Synthetic numeric ID; never copy an account-assigned plugin ID into fixtures.
+  const local = { name: 'Test', id: '1000000000000000000', main: 'dist/main.js', ui: 'dist/ui.html' };
   await writeFile(resolve(root, 'manifest.local.json'), JSON.stringify(local));
   await writeFile(resolve(folder, 'manifest.json'), JSON.stringify(local));
   await writeFile(resolve(folder, 'code.js'), 'original template');

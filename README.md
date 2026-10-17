@@ -67,6 +67,8 @@ The browser demo simulates Figma APIs and undo. Its results do not establish nat
 
 ## Use
 
+See the [usage guide](docs/USAGE.md) for text filling, image operations, and recovery limits.
+
 1. Select layers and open a tool.
 2. Set parameters, inspect the preview, and choose the results to apply where offered.
 3. Confirm the operation and inspect its result. If an outcome is uncertain, inspect the document before retrying.
@@ -96,9 +98,9 @@ npm run verify
 
 `verify` runs TypeScript checks, a production build, locale coverage, automated tests (including production startup HTML and resource round trips), and build-input isolation. Initial `figma.showUI` HTML must stay strictly below 1,572,864 UTF-8 bytes.
 
-This project builds independently of the author's other platform implementations. Source is in `src/`, build utilities in `scripts/`, and tests in `tests/`. Generated builds, dependencies, local plugin configuration, and QA output are excluded from Git. Historical migration scripts are not normal setup steps.
+This project builds independently of the author's other platform implementations. Source is in `src/`, build utilities in `scripts/`, and tests in `tests/`. Generated builds, dependencies, local plugin configuration, and QA output are excluded from Git. Internal process records and historical migration tools remain local-only.
 
-[Current status](docs/STATUS.md) · [Changelog](CHANGELOG.md) · [Engineering document index](docs/README.md)
+[Current status](docs/STATUS.md) · [Changelog](CHANGELOG.md) · [Documentation index](docs/README.md)
 
 ## License
 
