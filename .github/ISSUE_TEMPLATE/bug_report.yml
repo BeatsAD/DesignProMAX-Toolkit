@@ -1,0 +1,62 @@
+name: Bug report / 缺陷反馈
+description: Report a reproducible problem using non-sensitive sample data.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For security/privacy reports email wenbinailab@gmail.com privately. Do not include keys or customer files. / 安全及隐私问题请私下联系，不要上传密钥或客户文件。
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit / 版本或提交号
+      placeholder: e.g. 0.3.2 and the source commit
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host / 运行环境
+      options:
+        - Figma desktop / 桌面客户端
+        - Browser demo / 浏览器示例
+        - Build or CI / 构建或 CI
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: OS, Figma/browser version, UI language, and tool. / 系统、客户端或浏览器版本、语言和工具。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Use a small synthetic example, not a customer document. / 使用最小虚构示例。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result / 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result / 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional evidence / 可选证据
+      description: Attach only reviewed screenshots or filtered diagnostics. Remove sensitive content; never include keys. / 移除敏感内容，禁止附密钥。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check / 隐私检查
+      options:
+        - label: I removed credentials and private/customer data. / 已移除凭据及私密或客户资料。
+          required: true

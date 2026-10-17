@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security or privacy / 安全与隐私
+    url: https://github.com/BeatsAD/DesignProMAX-Toolkit/security/policy
+    about: Use the private email channel described in the security policy.
+  - name: Support / 支持说明
+    url: https://github.com/BeatsAD/DesignProMAX-Toolkit/blob/main/docs/SUPPORT.md
+    about: Installation, diagnostics, and safe reporting guidance.

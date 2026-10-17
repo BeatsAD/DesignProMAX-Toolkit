@@ -1,0 +1,28 @@
+name: Feature request / 功能建议
+description: Describe a design workflow and the improvement you need.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Workflow and problem / 场景和问题
+      description: Describe your workflow using a non-sensitive example. / 请使用无敏感内容的示例。
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome / 期望效果
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives / 替代方式
+      description: Describe any workaround you tried. / 可说明已尝试的替代方法。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check / 隐私检查
+      options:
+        - label: No credentials or private customer material are included. / 未包含凭据或客户私密资料。
+          required: true
