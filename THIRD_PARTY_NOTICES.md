@@ -12,7 +12,7 @@ Versions below come from this project's lockfile and installed package metadata.
 | --- | --- | --- | --- |
 | bmp-js | 0.1.0 | MIT | licenses/bmp-js-LICENSE |
 | lucide-react | 0.468.0 | ISC | licenses/lucide-react-LICENSE |
-| fflate | 0.8.2 | MIT | licenses/fflate-LICENSE |
+| fflate | 0.8.3 | MIT | licenses/fflate-LICENSE |
 | idb-keyval | 6.3.0 | Apache-2.0 | licenses/idb-keyval-LICENCE |
 | is-electron | 2.2.2 | MIT | licenses/is-electron-LICENSE |
 | is-url | 1.2.4 | MIT | licenses/is-url-LICENSE-MIT |
