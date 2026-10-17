@@ -27,7 +27,7 @@ Figma 插件|Figma plugin|Figmaプラグイン|Figma 플러그인|Plugin Figma|F
 已使用深度查询|Deep search used|深い検索を使用|심층 검색 사용됨|Recherche approfondie utilisée|Tiefensuche verwendet|Búsqueda profunda utilizada|Busca profunda utilizada
 已选择的全部对象|All selected objects|選択したすべての対象|선택한 모든 개체|Tous les objets sélectionnés|Alle ausgewählten Objekte|Todos los objetos seleccionados|Todos os objetos selecionados
 查看变更图层明细|View changed layer details|変更レイヤー詳細を表示|변경 레이어 상세 보기|Voir les calques modifiés|Geänderte Ebenen anzeigen|Ver detalles de capas cambiadas|Ver detalhes de camadas alteradas
-紧凑工具栏文字与默认、紧凑模式布局|Compact labels and default/compact layouts|コンパクト文字と通常・コンパクト配置|간단 도구 모음 글자와 기본/간단 레이아웃|Libellés compacts et dispositions|Kompakte Beschriftung und Layouts|Etiquetas compactas y diseños|Rótulos compactos e layouts
+紧凑工具栏文字与默认、紧凑模式布局|Compact labels and default/compact layouts|コンパクト文字と通常・コンパクト配置|간편 도구 모음 글자와 기본/간편 레이아웃|Libellés compacts et dispositions|Kompakte Beschriftung und Layouts|Etiquetas compactas y diseños|Rótulos compactos e layouts
 抠图服务、API 配置与图片上传许可|Removal service, API settings and upload permission|背景除去サービス・API・アップロード許可|배경 제거 서비스, API 설정 및 업로드 권한|Service de détourage, API et autorisation d’envoi|Freistellungsdienst, API und Upload-Erlaubnis|Servicio de fondo, API y permiso de subida|Serviço de fundo, API e permissão de envio
 本地处理、联网服务与数据记录|Local processing, online services and data history|ローカル処理・オンラインサービス・データ記録|로컬 처리, 온라인 서비스 및 데이터 기록|Traitement local, services et historique|Lokale Verarbeitung, Dienste und Verlauf|Procesamiento local, servicios e historial|Processamento local, serviços e histórico
 查看使用步骤、状态说明和隐私边界|Usage steps, status and privacy details|手順・状態・プライバシーの説明|사용 단계, 상태 및 개인정보 안내|Étapes, états et confidentialité|Anleitung, Status und Datenschutz|Pasos, estados y privacidad|Etapas, estados e privacidade
@@ -43,7 +43,7 @@ Figma 插件|Figma plugin|Figmaプラグイン|Figma 플러그인|Plugin Figma|F
 日志仅保存在本地，导出前会自动隐藏密钥和图片内容。当前记录|Logs stay local; keys and image data are redacted on export. Entries:|ログはローカル保存し、出力時にキーと画像を隠します。件数：|로그는 로컬 저장되며 내보낼 때 키와 이미지를 가립니다. 항목:|Journaux locaux ; clés et images masquées à l’export. Entrées :|Protokolle bleiben lokal; Export schwärzt Schlüssel und Bilder. Einträge:|Registros locales; se ocultan claves e imágenes al exportar. Entradas:|Registros locais; exportação oculta chaves e imagens. Entradas:
 必须为空或以 http://、https:// 开头的有效地址|Enter an empty value or a valid HTTP/HTTPS URL|空欄か有効なHTTP/HTTPS URLが必要|빈 값 또는 올바른 HTTP/HTTPS URL 입력|Valeur vide ou URL HTTP/HTTPS valide|Leer lassen oder gültige HTTP/HTTPS-URL eingeben|Vacío o URL HTTP/HTTPS válida|Vazio ou URL HTTP/HTTPS válida
 开发记录日期：|Development date:|開発記録日：|개발 기록 날짜:|Date de développement :|Entwicklungsdatum:|Fecha de desarrollo:|Data de desenvolvimento:
-平均置信度|Average confidence|平均信頼度|평균 신뢰도|Confiance moyenne|Mittlere Sicherheit|Confianza media|Confiança média
+平均置信度|Average confidence|平均信頼度|평균 신뢰도|Confiance moyenne|Durchschnittliche Konfidenz|Confianza media|Confiança média
 耗时|Duration|所要時間|소요 시간|Durée|Dauer|Duración|Duração
 已选择|Selected|選択済み|선택됨|Sélectionné|Ausgewählt|Seleccionado|Selecionado
 已跳过|Skipped|除外済み|건너뜀|Ignorés|Übersprungen|Omitidos|Ignorados

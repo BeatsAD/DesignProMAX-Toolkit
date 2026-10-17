@@ -21,7 +21,7 @@ Tools|工具数量|ツール数|도구 수|Outils|Werkzeuge|Herramientas|Ferrame
 Home|首页|ホーム|홈|Accueil|Start|Inicio|Início
 Settings|设置|設定|설정|Réglages|Einstellungen|Ajustes|Configurações
 Help|帮助|ヘルプ|도움말|Aide|Hilfe|Ayuda|Ajuda
-Feedback|问题反馈|フィードバック|피드백|Assistance|Feedback|Comentarios|Feedback
+Feedback|问题反馈|フィードバック|피드백|Commentaires|Feedback|Comentarios|Feedback
 Version|版本|バージョン|버전|Version|Version|Versión|Versão
 Language|语言|言語|언어|Langue|Sprache|Idioma|Idioma
 Choose your language|选择你的语言|言語を選択|언어 선택|Choisissez votre langue|Sprache auswählen|Elige tu idioma|Escolha seu idioma
@@ -71,15 +71,15 @@ Local processing|本地处理|ローカル処理|로컬 처리|Traitement local|
 External service|外部服务|外部サービス|외부 서비스|Service externe|Externer Dienst|Servicio externo|Serviço externo
 Your everyday design work, simplified.|让日常设计工作更顺手。|毎日のデザイン作業をシンプルに。|일상의 디자인 작업을 간편하게.|Simplifiez votre travail de design.|Design-Alltag einfacher machen.|Simplifica tu trabajo de diseño.|Simplifique seu trabalho de design.
 Tools for the small things that take time.|把耗时的小事交给工具。|時間のかかる小さな作業をツールに。|시간이 걸리는 작은 작업을 도구로.|Des outils pour les petites tâches chronophages.|Werkzeuge für zeitraubende Kleinigkeiten.|Herramientas para tareas que consumen tiempo.|Ferramentas para pequenas tarefas demoradas.
-Image tools|图片工具|画像ツール|이미지 도구|Images|Bildwerkzeuge|Imágenes|Imagens
+Image tools|图片工具|画像ツール|이미지 도구|Outils d’image|Bildwerkzeuge|Herramientas de imagen|Ferramentas de imagem
 Text & data|文本与数据|テキストとデータ|텍스트 및 데이터|Texte et données|Text und Daten|Texto y datos|Texto e dados
 Document tools|文档工具|ドキュメントツール|문서 도구|Document|Dokumentwerkzeuge|Documento|Documento
 Remove Background|一键抠图|背景を削除|배경 제거|Supprimer le fond|Hintergrund entfernen|Eliminar fondo|Remover fundo
-Trim Transparency|裁剪透明|透明部分をトリミング|투명 영역 자르기|Rogner la transparence|Transparenz zuschneiden|Recortar transparencia|Recortar transparência
+Trim Transparency|裁剪透明|透明な余白を除去|투명 여백 자르기|Rogner les bords transparents|Transparente Ränder entfernen|Recortar bordes transparentes|Recortar bordas transparentes
 Split Image|图片分割|画像を分割|이미지 분할|Diviser l’image|Bild teilen|Dividir imagen|Dividir imagem
-Fill Text|文本填充|テキストを入力|텍스트 채우기|Remplir le texte|Text füllen|Rellenar texto|Preencher texto
+Fill Text|文本填充|テキストを一括入力|텍스트 채우기|Remplir le texte|Text füllen|Rellenar texto|Preencher texto
 Extract Text|文本识别|文字を認識|텍스트 추출|Extraire le texte|Text erkennen|Extraer texto|Extrair texto
-Split & Merge Text|文本拆合|テキストを分割・結合|텍스트 분할 및 병합|Diviser et fusionner|Text teilen und verbinden|Dividir y unir texto|Dividir e unir texto
+Split & Merge Text|文本拆合|テキストを分割・結合|텍스트 나누기·합치기|Diviser et fusionner le texte|Text teilen und verbinden|Dividir y unir texto|Dividir e unir texto
 Clean Up Layers|图层清理|レイヤーを整理|레이어 정리|Nettoyer les calques|Ebenen bereinigen|Limpiar capas|Limpar camadas
 Find & Replace|文本替换|検索と置換|찾기 및 바꾸기|Rechercher et remplacer|Suchen und ersetzen|Buscar y reemplazar|Localizar e substituir
 Design Inventory|数据统计|デザイン一覧|디자인 목록|Inventaire du design|Design-Inventar|Inventario de diseño|Inventário de design
@@ -134,11 +134,11 @@ Cycle|循环|繰り返し|반복|Cycle|Zyklus|Ciclo|Ciclo
 Fixed|固定值|固定値|고정값|Fixe|Fest|Fijo|Fixo
 Fixed value|固定内容|固定値|고정값|Valeur fixe|Fester Wert|Valor fijo|Valor fixo
 Split|拆分|分割|분할|Diviser|Teilen|Dividir|Dividir
-Merge|合并|結合|병합|Fusionner|Verbinden|Unir|Unir
+Merge|合并|結合|합치기|Fusionner|Verbinden|Unir|Unir
 Delimiters|分隔符|区切り文字|구분자|Séparateurs|Trennzeichen|Separadores|Separadores
 Separator|连接符|結合文字|연결 문자|Séparateur|Verbindungszeichen|Separador|Separador
 Vertical|从上到下|縦方向|세로|Vertical|Vertikal|Vertical|Vertical
-Horizontal|从左到右|横方向|가로|Horizontal|Horizontal|Horizontal|Horizontal
+Left to right|从左到右|左から右|왼쪽에서 오른쪽|De gauche à droite|Von links nach rechts|De izquierda a derecha|Da esquerda para a direita
 Gap|间距|間隔|간격|Espacement|Abstand|Espaciado|Espaçamento
 Keep punctuation|保留标点|句読点を保持|문장부호 유지|Garder la ponctuation|Satzzeichen behalten|Conservar puntuación|Manter pontuação
 Find|查找内容|検索|찾기|Rechercher|Suchen|Buscar|Localizar
@@ -168,7 +168,7 @@ Moved|移动|移動|이동|Déplacé|Verschoben|Movido|Movido
 Resized|调整尺寸|サイズ変更|크기 변경|Redimensionné|Größe geändert|Redimensionado|Redimensionado
 Frozen|冻结保护|保護|보호됨|Protégé|Geschützt|Protegido|Protegido
 Protected|已保护|保護対象|보호됨|Protégé|Geschützt|Protegido|Protegido
-Automatic|自动识别|自動|자동|Automatique|Automatisch|Automático|Automático
+Detect regions|自动识别|領域を自動検出|영역 자동 감지|Détecter les zones|Bereiche erkennen|Detectar regiones|Detectar regiões
 Cards|卡片|カード|카드|Cartes|Karten|Tarjetas|Cartões
 Elements|元素|要素|요소|Éléments|Elemente|Elementos|Elementos
 Rows|行数|行数|행 수|Lignes|Zeilen|Filas|Linhas

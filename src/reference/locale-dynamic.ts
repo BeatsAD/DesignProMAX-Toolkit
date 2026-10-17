@@ -37,8 +37,8 @@ export const DYNAMIC_ROWS=`
 %1月|%1|%1月|%1월|%1|%1|%1|%1
 %1日|%1|%1日|%1일|%1|%1|%1|%1
 星期%1|Weekday %1|曜日 %1|요일 %1|Jour %1|Wochentag %1|Día %1|Dia %1
-自定义 %1 项|%1 custom values|独自項目 %1 件|사용자 값 %1개|%1 valeurs personnalisées|%1 eigene Werte|%1 valores personalizados|%1 valores personalizados
-最多创建 %1 个自定义字段|Up to %1 custom fields|独自フィールド最大 %1 件|사용자 필드 최대 %1개|%1 champs personnalisés maximum|Höchstens %1 eigene Felder|Hasta %1 campos personalizados|Até %1 campos personalizados
+自定义 %1 项|Custom values: %1|カスタム値 %1 件|사용자 지정 값 %1개|Valeurs personnalisées : %1|Benutzerdefinierte Werte: %1|Valores personalizados: %1|Valores personalizados: %1
+最多创建 %1 个自定义字段|Maximum custom fields: %1|カスタムフィールドは最大 %1 件|사용자 지정 필드는 최대 %1개|Nombre maximal de champs personnalisés : %1|Maximale Anzahl benutzerdefinierter Felder: %1|Máximo de campos personalizados: %1|Máximo de campos personalizados: %1
 请完善“%1”字段配置|Complete the “%1” field settings|「%1」の設定を完成してください|“%1” 필드 설정을 완성하세요|Complétez les réglages du champ « %1 »|Feldeinstellungen „%1“ vervollständigen|Completa los ajustes del campo «%1»|Complete as configurações do campo “%1”
 按%1拆分|Split by %1|%1 で分割|%1 기준 나누기|Diviser par %1|Nach %1 teilen|Dividir por %1|Dividir por %1
 按已选 %1 项重新分配|Redistribute %1 selected items|選択した %1 項目を再配分|선택 항목 %1개 재분배|Redistribuer %1 éléments sélectionnés|%1 ausgewählte Einträge neu verteilen|Redistribuir %1 seleccionados|Redistribuir %1 selecionados
@@ -78,7 +78,7 @@ export const DYNAMIC_ROWS=`
 正在执行%1|Running %1|%1 を実行中|%1 실행 중|Exécution de %1|%1 ausführen|Ejecutando %1|Executando %1
 正在生成%1预览|Creating %1 preview|%1 プレビューを生成中|%1 미리보기 생성 중|Création de l’aperçu %1|Vorschau für %1 erstellen|Creando vista previa de %1|Criando prévia de %1
 正在生成“%1”预览|Creating “%1” preview|「%1」プレビューを生成中|“%1” 미리보기 생성 중|Création de l’aperçu « %1 »|Vorschau für „%1“ erstellen|Creando vista previa de «%1»|Criando prévia de “%1”
-已写入 %1 项，跳过 %2 项，失败 %3 项|Written %1, skipped %2, failed %3|書込 %1、除外 %2、失敗 %3|쓰기 %1, 건너뜀 %2, 실패 %3|Écrits %1, ignorés %2, échecs %3|Geschrieben %1, übersprungen %2, fehlgeschlagen %3|Escritos %1, omitidos %2, fallidos %3|Gravados %1, ignorados %2, falhas %3
+已写入 %1 项，跳过 %2 项，失败 %3 项|Written: %1 · Skipped: %2 · Failed: %3|書き込み %1 件・スキップ %2 件・失敗 %3 件|쓰기 %1개 · 건너뜀 %2개 · 실패 %3개|Écritures : %1 · Éléments ignorés : %2 · Échecs : %3|Geschrieben: %1 · Übersprungen: %2 · Fehlgeschlagen: %3|Escritos: %1 · Omitidos: %2 · Fallidos: %3|Gravados: %1 · Ignorados: %2 · Falhas: %3
 适配完成：成功 %1 个，失败 %2 个，冻结 %3 个不确定区域，可通过 Figma 撤销恢复|Adapted: %1 succeeded, %2 failed, %3 frozen regions. Restore with Figma Undo.|適応完了：成功 %1、失敗 %2、固定領域 %3。Figmaで取消可能。|맞춤 완료: 성공 %1, 실패 %2, 고정 영역 %3. Figma 실행 취소로 복원하세요.|Adaptation : %1 réussites, %2 échecs, %3 zones figées. Annulez dans Figma.|Angepasst: %1 erfolgreich, %2 fehlgeschlagen, %3 eingefroren. Figma Rückgängig möglich.|Adaptado: %1 éxitos, %2 fallos, %3 áreas congeladas. Deshacer en Figma.|Adaptado: %1 sucessos, %2 falhas, %3 áreas congeladas. Desfazer no Figma.
 设置中心/%1|Settings/%1|設定/%1|설정/%1|Réglages/%1|Einstellungen/%1|Ajustes/%1|Configurações/%1
 DesignProMAX Figma 插件 v%1|DesignProMAX Toolkit for Figma v%1|DesignProMAX Toolkit Figma版 v%1|DesignProMAX Toolkit Figma 버전 v%1|DesignProMAX Toolkit pour Figma v%1|DesignProMAX Toolkit für Figma v%1|DesignProMAX Toolkit para Figma v%1|DesignProMAX Toolkit para Figma v%1

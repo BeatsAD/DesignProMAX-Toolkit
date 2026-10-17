@@ -92,7 +92,9 @@ export async function handleRunTextFill(context: HandlerContext, payload: RunTex
         return true;
     });
     commitUndoIfChanged(context, outcome.successCount);
-    return {...result(outcome.successCount, outcome.failedCount, `文本填充完成：成功 ${outcome.successCount} 个，失败 ${outcome.failedCount} 个`), cancelled: outcome.cancelled};
+    return {...result(outcome.successCount, outcome.failedCount, outcome.cancelled
+        ? `操作已停止：成功 ${outcome.successCount} 项，失败 ${outcome.failedCount} 项；已完成的修改保留。`
+        : `文本填充完成：成功 ${outcome.successCount} 个，失败 ${outcome.failedCount} 个`), cancelled: outcome.cancelled};
 }
 function buildFindReplaceItemsForNode(node: HostNode, payload: FindReplacePreviewPayload, target: FindReplaceTarget, applyMode: FindReplaceApplyMode): FindReplacePreviewItem[] {
     const text = String(node.characters ?? '');
@@ -922,7 +924,9 @@ export async function handleRunFindReplace(context: HandlerContext, payload: Run
         } catch (error) { if (!context.signal?.aborted) failedCount += items.length; throw error; }
     });
     commitUndoIfChanged(context, successCount);
-    return {...result(successCount, failedCount, `替换完成：成功 ${successCount} 个，失败 ${failedCount} 个`), cancelled: outcome.cancelled};
+    return {...result(successCount, failedCount, outcome.cancelled
+        ? `操作已停止：成功 ${successCount} 项，失败 ${failedCount} 项；已完成的修改保留。`
+        : `替换完成：成功 ${successCount} 个，失败 ${failedCount} 个`), cancelled: outcome.cancelled};
 }
 export async function handlePreviewSizeFit(context: HandlerContext, payload: PreviewSizeFitPayload) {
     throwIfTaskCancelled(context);
@@ -954,7 +958,9 @@ export async function handleRunSizeFit(context: HandlerContext, payload: RunSize
         return true;
     });
     commitUndoIfChanged(context, outcome.successCount);
-    return {...result(outcome.successCount, outcome.failedCount, `适配完成：成功 ${outcome.successCount} 个，失败 ${outcome.failedCount} 个，冻结 ${frozenCount} 个不确定区域，可通过 Figma 撤销恢复`), cancelled: outcome.cancelled};
+    return {...result(outcome.successCount, outcome.failedCount, outcome.cancelled
+        ? `操作已停止：成功 ${outcome.successCount} 项，失败 ${outcome.failedCount} 项；已完成的修改保留。`
+        : `适配完成：成功 ${outcome.successCount} 个，失败 ${outcome.failedCount} 个，冻结 ${frozenCount} 个不确定区域，可通过 Figma 撤销恢复`), cancelled: outcome.cancelled};
 }
 async function buildSizeFitPreviewItem(context: HandlerContext, node: HostNode, payload: PreviewSizeFitPayload): Promise<SizeFitPreviewItem> {
     const snapshot = await snapshotNodeWithPreview(node, undefined, context);

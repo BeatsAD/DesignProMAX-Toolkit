@@ -54,6 +54,10 @@ body{min-width:320px}
   .app-shell-no-sidebar .text-fill-preview-table :is(th,td):nth-child(3){width:112px}
   .app-shell-no-sidebar .text-fill-preview-table :is(th,td):nth-child(4){width:72px}
   .app-shell-no-sidebar .batch-result-table th{white-space:normal;overflow-wrap:anywhere;overflow:visible;padding-block:var(--space-2)}
+  /* Keep translated help names readable within the existing two-column index. */
+  .app-shell-no-sidebar .help-manual-index-item{padding-block:var(--space-2)}
+  .app-shell-no-sidebar .help-manual-index-item>span:not(.status-tag){overflow:visible;line-height:1.45;overflow-wrap:anywhere;white-space:normal}
+  .app-shell-no-sidebar .help-manual-index-item>svg{flex:0 0 auto}
 }
 
 /* Batch counts are plain metadata, not colored statuses. */

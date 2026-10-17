@@ -84,7 +84,7 @@ export class ReferenceController{
       if(p.mode==='replaceOriginal')record.retired=true;successCount++;
     }catch(error){if(signal?.aborted){cancelled=true;break;}failures.push({nodeId:item.nodeId,message:imageWriteErrorMessage(error)});}}
     if(cancelled&&!successCount&&!failures.length)throw new Error('CANCELLED');
-    return{successCount,failedCount:failures.length,skippedCount:0,failures,cancelled,recoverable:true,message:`完成 ${successCount} 项，失败 ${failures.length} 项`};
+    return{successCount,failedCount:failures.length,skippedCount:0,failures,cancelled,recoverable:true,message:cancelled?`操作已停止：成功 ${successCount} 项，失败 ${failures.length} 项；已完成的修改保留。`:`完成 ${successCount} 项，失败 ${failures.length} 项`};
   }
   if(type==='RESIZE_UI'||type==='MINIMIZE_UI'||type==='UI_READY')return{width:p.width,height:p.height};
   throw new Error('INVALID');

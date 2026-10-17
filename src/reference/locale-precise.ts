@@ -5,7 +5,7 @@ export const PRECISE_ROWS=`
 仅清除插件缓存，保留设置和历史记录。|Clear plugin cache. Keep settings and history.|設定と履歴を残して、キャッシュを削除します。|설정과 기록을 유지하고 플러그인 캐시를 지웁니다.|Vider le cache, conserver réglages et historique.|Plugin-Cache leeren. Einstellungen und Verlauf behalten.|Borrar la caché; conservar ajustes e historial.|Limpar o cache; manter configurações e histórico.
 将清除字体、字号和颜色替换记录。|Clear font, size and color replacement history.|フォント・サイズ・色の置換履歴を削除します。|글꼴, 크기, 색상 바꾸기 기록을 지웁니다.|Effacer l’historique des remplacements de police, taille et couleur.|Ersetzungsverlauf für Schrift, Größe und Farbe löschen.|Borrar el historial de cambios de fuente, tamaño y color.|Limpar o histórico de substituições de fonte, tamanho e cor.
 将清空本地诊断日志。|Clear local diagnostic logs.|ローカルの診断ログを削除します。|로컬 진단 로그를 지웁니다.|Effacer les journaux de diagnostic locaux.|Lokale Diagnoseprotokolle löschen.|Borrar los registros de diagnóstico locales.|Limpar os registros de diagnóstico locais.
-未就绪|Not ready|未準備|준비 안 됨|Pas prêt|Nicht bereit|No preparado|Não está pronto
+未就绪|Not ready|準備未完了|준비 안 됨|Pas prêt|Nicht bereit|No disponible aún|Ainda não está pronto
 当前未连接 Figma|Figma disconnected|Figma未接続|Figma 연결 끊김|Figma déconnecté|Figma nicht verbunden|Figma desconectado|Figma desconectado
 按需加载|Load on demand|必要時に読み込み|필요 시 로드|Chargement à la demande|Bei Bedarf laden|Carga bajo demanda|Carregar sob demanda
 生成统计|Generate statistics|統計を生成|통계 생성|Générer les statistiques|Statistik erstellen|Generar estadísticas|Gerar estatísticas
@@ -19,23 +19,23 @@ export const PRECISE_ROWS=`
 字段配置|Field settings|フィールド設定|필드 설정|Réglages des champs|Feldeinstellungen|Ajustes de campos|Configurações dos campos
 常用字段|Common fields|共通フィールド|기본 필드|Champs courants|Standardfelder|Campos comunes|Campos comuns
 自定义连接符|Custom separator|独自区切り|사용자 구분자|Séparateur personnalisé|Eigenes Trennzeichen|Separador personalizado|Separador personalizado
-左右拆分|Split left/right|左右に分割|좌우로 나누기|Diviser gauche/droite|Links/rechts teilen|Dividir izquierda/derecha|Dividir esquerda/direita
-上下拆分|Split top/bottom|上下に分割|상하로 나누기|Diviser haut/bas|Oben/unten teilen|Dividir arriba/abajo|Dividir cima/baixo
-单图透明 PNG|Single-image transparent PNG|1枚の透過PNG|단일 이미지 투명 PNG|PNG transparent d’une image|Transparentes PNG aus einem Bild|PNG transparente de una imagen|PNG transparente de uma imagem
+左右拆分|Split left/right|左右に分割|좌우로 나누기|Diviser en deux, gauche/droite|Links/rechts teilen|Dividir izquierda/derecha|Separar esquerda/direita
+上下拆分|Split top/bottom|上下に分割|상하로 나누기|Diviser en deux, haut/bas|Oben/unten teilen|Dividir arriba/abajo|Separar cima/baixo
+通过外部服务移除背景|Remove backgrounds with an external service|外部サービスで背景を除去|외부 서비스로 배경 제거|Supprimer le fond via un service externe|Hintergrund per externem Dienst entfernen|Eliminar fondos con un servicio externo|Remover fundos com um serviço externo
 裁掉 PNG 透明边|Trim transparent PNG borders|PNGの透明余白を除去|PNG 투명 테두리 자르기|Rogner les bords transparents|Transparente PNG-Ränder entfernen|Recortar bordes transparentes|Recortar bordas transparentes
 自动识别元素并拆分图片|Detect and split image elements|要素を検出して画像分割|요소 감지 및 이미지 분할|Détecter et découper les éléments|Bildelemente erkennen und teilen|Detectar y dividir elementos|Detectar e dividir elementos
 模拟与脱敏数据|Sample and masked data|サンプル・匿名化データ|샘플 및 마스킹 데이터|Données exemples et masquées|Beispiel- und maskierte Daten|Datos de ejemplo y enmascarados|Dados de exemplo e mascarados
-本地图片文字识别与复制|Local OCR and copy|ローカル文字認識とコピー|로컬 OCR 및 복사|OCR local et copie|Lokale OCR und Kopieren|OCR local y copia|OCR local e cópia
+本地图片文字识别与复制|Recognize and copy text locally|文字をローカルで認識・コピー|로컬에서 텍스트 인식·복사|Reconnaître et copier le texte localement|Text lokal erkennen und kopieren|Reconocer y copiar texto localmente|Reconhecer e copiar texto localmente
 文本合并与标点拆分|Merge text or split by punctuation|文字結合・句読点分割|텍스트 합치기 및 문장부호 분할|Fusion ou découpe par ponctuation|Text verbinden oder an Satzzeichen teilen|Combinar o dividir por puntuación|Combinar ou dividir por pontuação
 扫描后确认清理|Scan, review and clean|走査・確認して削除|스캔, 확인 및 정리|Analyser, vérifier et nettoyer|Prüfen, bestätigen und bereinigen|Analizar, revisar y limpiar|Analisar, revisar e limpar
-批量查找替换|Batch find and replace|一括検索・置換|일괄 찾기 및 바꾸기|Rechercher et remplacer en lot|Stapelweise suchen und ersetzen|Buscar y reemplazar en lote|Buscar e substituir em lote
+批量查找替换|Find and replace text or styles|文字やスタイルを一括置換|텍스트·스타일 일괄 바꾸기|Remplacer du texte ou des styles|Text oder Stile ersetzen|Reemplazar texto o estilos|Substituir texto ou estilos
 跨页面设计图清单|Design inventory across pages|ページ横断デザイン一覧|페이지 간 디자인 목록|Inventaire sur plusieurs pages|Designübersicht über mehrere Seiten|Inventario de varias páginas|Inventário entre páginas
 调整容器尺寸并保留布局结构|Resize containers, keep structure|構造を保ってコンテナを調整|구조를 유지하며 컨테이너 크기 맞춤|Redimensionner en gardant la structure|Containergröße ändern, Struktur behalten|Redimensionar conservando estructura|Redimensionar mantendo estrutura
 自定义候选内容填充|Fill with custom values|カスタム候補で入力|사용자 지정 값으로 채우기|Remplir avec vos valeurs|Mit eigenen Werten füllen|Rellenar con valores propios|Preencher com valores próprios
 将当前选中对象中的文本替换为自定义候选内容。|Replace text in the selected objects with your custom values.|選択したオブジェクトのテキストをカスタム候補に置き換えます。|선택한 객체의 텍스트를 사용자 지정 후보 값으로 바꿉니다.|Remplacez le texte des objets sélectionnés par vos valeurs.|Text in ausgewählten Objekten durch eigene Werte ersetzen.|Reemplaza el texto de los objetos seleccionados con tus valores.|Substitua o texto dos objetos selecionados pelos seus valores.
-新增自定义字段，填写字段名称、候选内容并选择填充方式。|Add a custom field, enter its name and values, and choose a fill mode.|カスタム項目を追加し、名前と候補を入力して入力方法を選びます。|사용자 지정 필드를 추가하고 이름과 후보 값을 입력한 후 채우기 방식을 선택하세요.|Ajoutez un champ, son nom et ses valeurs, puis choisissez le mode.|Eigenes Feld mit Namen und Werten anlegen und Füllmodus wählen.|Añade un campo, introduce su nombre y valores y elige un modo.|Adicione um campo, insira o nome e os valores e escolha um modo.
+新增自定义字段，填写字段名称、候选内容并选择填充方式。|Add a custom field, enter its name and values, and choose a fill mode.|カスタムフィールドを追加し、名前と候補を入力して入力方法を選びます。|사용자 지정 필드를 추가하고 이름과 후보 값을 입력한 후 채우기 방식을 선택하세요.|Ajoutez un champ, son nom et ses valeurs, puis choisissez le mode.|Eigenes Feld mit Namen und Werten anlegen und Füllmodus wählen.|Añade un campo, introduce su nombre y valores y elige un modo.|Adicione um campo, insira o nome e os valores e escolha um modo.
 支持顺序、随机、循环和固定值填充。|Supports sequence, random, cycle and fixed-value modes.|順序・ランダム・循環・固定値で入力できます。|순서, 무작위, 순환, 고정 값 채우기를 지원합니다.|Modes séquentiel, aléatoire, cyclique et valeur fixe.|Unterstützt Reihenfolge, Zufall, Zyklus und feste Werte.|Admite modos secuencial, aleatorio, cíclico y de valor fijo.|Suporta os modos sequencial, aleatório, cíclico e valor fixo.
-自定义字段读取失败，请重试|Could not load custom fields. Retry.|カスタム項目を読み込めませんでした。再試行してください。|사용자 지정 필드를 불러오지 못했습니다. 다시 시도하세요.|Chargement des champs impossible. Réessayez.|Eigene Felder konnten nicht geladen werden. Erneut versuchen.|No se pudieron cargar los campos. Reintenta.|Não foi possível carregar os campos. Tente novamente.
+自定义字段读取失败，请重试|Could not load custom fields. Retry.|カスタムフィールドを読み込めませんでした。再試行してください。|사용자 지정 필드를 불러오지 못했습니다. 다시 시도하세요.|Chargement des champs impossible. Réessayez.|Eigene Felder konnten nicht geladen werden. Erneut versuchen.|No se pudieron cargar los campos. Reintenta.|Não foi possível carregar os campos. Tente novamente.
 跟随 Figma|Follow Figma|Figma に合わせる|Figma 테마 따르기|Suivre Figma|Figma folgen|Seguir Figma|Seguir o Figma
 浅色|Light|ライト|밝게|Clair|Hell|Claro|Claro
 深色|Dark|ダーク|어둡게|Sombre|Dunkel|Oscuro|Escuro

@@ -93,16 +93,16 @@ export const REFERENCE_ROWS=`
 知道了|Got it|了解|확인|Compris|Verstanden|Entendido|Entendi
 查看消息公告|View messages|お知らせを見る|알림 보기|Voir les messages|Mitteilungen anzeigen|Ver mensajes|Ver mensagens
 常用字段|Common fields|よく使う項目|자주 쓰는 필드|Champs courants|Häufige Felder|Campos comunes|Campos comuns
-自定义字段|Custom fields|カスタム項目|사용자 지정 필드|Champs personnalisés|Eigene Felder|Campos personalizados|Campos personalizados
-新增字段|Add field|項目を追加|필드 추가|Ajouter un champ|Feld hinzufügen|Añadir campo|Adicionar campo
+自定义字段|Custom fields|カスタムフィールド|사용자 지정 필드|Champs personnalisés|Benutzerdefinierte Felder|Campos personalizados|Campos personalizados
+新增字段|Add field|フィールドを追加|필드 추가|Ajouter un champ|Feld hinzufügen|Añadir campo|Adicionar campo
 候选内容|Candidate values|候補値|후보 값|Valeurs possibles|Mögliche Werte|Valores posibles|Valores possíveis
-暂无自定义字段|No custom fields|カスタム項目がありません|사용자 지정 필드 없음|Aucun champ personnalisé|Keine eigenen Felder|Sin campos personalizados|Sem campos personalizados
-正在保存自定义字段|Saving custom fields|カスタム項目を保存中|사용자 지정 필드 저장 중|Enregistrement des champs|Eigene Felder speichern|Guardando campos|Salvando campos
-自定义字段已保存|Custom fields saved|保存しました|사용자 지정 필드 저장됨|Champs enregistrés|Eigene Felder gespeichert|Campos guardados|Campos salvos
-自定义字段已删除|Custom field deleted|削除しました|사용자 지정 필드 삭제됨|Champ supprimé|Eigenes Feld gelöscht|Campo eliminado|Campo excluído
+暂无自定义字段|No custom fields|カスタムフィールドはありません|사용자 지정 필드 없음|Aucun champ personnalisé|Keine benutzerdefinierten Felder|Sin campos personalizados|Sem campos personalizados
+正在保存自定义字段|Saving custom fields|カスタムフィールドを保存中|사용자 지정 필드 저장 중|Enregistrement des champs personnalisés|Benutzerdefinierte Felder werden gespeichert|Guardando campos personalizados|Salvando campos personalizados
+自定义字段已保存|Custom fields saved|カスタムフィールドを保存しました|사용자 지정 필드 저장됨|Champs personnalisés enregistrés|Benutzerdefinierte Felder gespeichert|Campos personalizados guardados|Campos personalizados salvos
+自定义字段已删除|Custom field deleted|カスタムフィールドを削除しました|사용자 지정 필드 삭제됨|Champ personnalisé supprimé|Benutzerdefiniertes Feld gelöscht|Campo personalizado eliminado|Campo personalizado excluído
 未保存|Not saved|未保存|저장 안 됨|Non enregistré|Nicht gespeichert|Sin guardar|Não salvo
 尚未保存|Not saved yet|まだ未保存|아직 저장 안 됨|Pas encore enregistré|Noch nicht gespeichert|Aún sin guardar|Ainda não salvo
-需重新生成|Regenerate required|再作成が必要|다시 생성 필요|À régénérer|Neu erzeugen|Se debe regenerar|Requer nova geração
+需重新生成|Generate again|再生成が必要|다시 생성 필요|Générer à nouveau|Erneut erstellen|Volver a generar|Gerar novamente
 需重新分配|Redistribute required|再分配が必要|다시 분배 필요|À redistribuer|Neu verteilen|Se debe redistribuir|Requer redistribuição
 数据来源|Data source|データソース|데이터 원본|Source des données|Datenquelle|Origen de datos|Fonte de dados
 默认数据|Default data|既定データ|기본 데이터|Données par défaut|Standarddaten|Datos predeterminados|Dados padrão

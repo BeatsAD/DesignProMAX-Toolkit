@@ -122,7 +122,8 @@ export default function TextRecognitionPage({ request, selection, task, setTask,
       <Panel title="识别结果">
         {result ? (
           <div className="text-recognition-result">
-            {result.lowConfidenceLineIndexes.length ? <div className="panel-status-row"><StatusTag tone="warning">第 {result.lowConfidenceLineIndexes.map((index) => index + 1).join('、')} 行识别置信度较低，请核对。</StatusTag></div> : null}
+            <p className="text-recognition-intro">置信度仅供参考，高置信度也可能识别错误；使用前请核对数字、日期和金额。</p>
+            {result.lowConfidenceLineIndexes.length ? <div className="panel-status-row"><StatusTag tone="warning">{`第 ${result.lowConfidenceLineIndexes.map((index) => index + 1).join(', ')} 行识别置信度较低，请核对。`}</StatusTag></div> : null}
             <textarea
               aria-label="识别文本"
               className="text-recognition-textarea"

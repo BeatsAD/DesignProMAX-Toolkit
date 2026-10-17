@@ -57,7 +57,7 @@ test('cancelled text batches acknowledge earlier writes and leave later targets 
  const f=fixture(),a=f.text('a','A'),b=f.text('b','B');f.page.selection=[a,b];const plan=await f.req('PREVIEW_TEXT_FILL',{scope:'selection',rules});const abort=new AbortController();let value=a.characters;
  Object.defineProperty(a,'characters',{get:()=>value,set:v=>{value=v;queueMicrotask(()=>abort.abort());}});
  const result=await f.controller.request('REFERENCE',{type:'RUN_TEXT_FILL',payload:{items:plan.items,confirmed:true}},abort.signal);
- assert.equal(result.successCount,1);assert.equal(result.cancelled,true);assert.equal(a.characters,'Updated');assert.equal(b.characters,'B');
+ assert.equal(result.successCount,1);assert.equal(result.cancelled,true);assert.equal(a.characters,'Updated');assert.equal(b.characters,'B');assert.match(result.message,/操作已停止/);assert.match(result.message,/成功 1 项/);assert.match(result.message,/已完成的修改保留/);
 });
 test('merge deletion failure restores every source and preserves the preceding edit',async()=>{
  const f=fixture(true),a=f.text('a','A'),b=f.text('b','B'),c=f.text('c','C');a.x=17;f.page.selection=[a,b,c];c.remove=()=>{throw new Error('Native removal rejected');};const ctx={host:f.host},plan=handlePreviewTextSplitMerge(ctx,merge);

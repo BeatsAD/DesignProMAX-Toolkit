@@ -60,7 +60,7 @@ export function isToolVisible(page: HomeToolPageId): boolean {
 
 export const toolEntries = {
   
-  cutout: { page: 'cutout', label: '一键抠图', desc: '单图透明 PNG', icon: Eraser, group: 'ai-image', availability: 'requires-config' },
+  cutout: { page: 'cutout', label: '一键抠图', desc: '通过外部服务移除背景', icon: Eraser, group: 'ai-image', availability: 'requires-config' },
   transparentCrop: { page: 'transparentCrop', label: '裁剪透明', desc: '裁掉 PNG 透明边', icon: Crop, group: 'ai-image', availability: 'ready' },
   imageSplit: { page: 'imageSplit', label: '图片分割', desc: '自动识别元素并拆分图片', icon: Scan, group: 'ai-image', availability: 'ready' },
   

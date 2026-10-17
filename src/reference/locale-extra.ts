@@ -28,7 +28,7 @@ export const EXTRA_ROWS=`
 使用提示|Tips|ヒント|사용 팁|Conseils|Tipps|Consejos|Dicas
 失败项不会修改原图。|Failed items keep their originals.|失敗した項目の元画像は変更しません。|실패한 항목의 원본은 변경하지 않습니다.|Les originaux des échecs sont conservés.|Bei Fehlern bleibt das Original erhalten.|Los fallos conservan el original.|Falhas mantêm o original.
 开发预览|Development preview|開発プレビュー|개발 미리보기|Aperçu de développement|Entwicklungsvorschau|Vista previa de desarrollo|Prévia de desenvolvimento
-平均置信度|Confidence|信頼度|신뢰도|Confiance|Konfidenz|Confianza|Confiança
+平均置信度|Average confidence|平均信頼度|평균 신뢰도|Confiance moyenne|Durchschnittliche Konfidenz|Confianza media|Confiança média
 耗时|Duration|所要時間|소요 시간|Durée|Dauer|Duración|Duração
 保留规则|Retention|保持規則|유지 규칙|Conservation|Beibehaltung|Conservación|Retenção
 来源文本|Source text|元のテキスト|원본 텍스트|Texte source|Quelltext|Texto de origen|Texto de origem
@@ -122,7 +122,7 @@ export const EXTRA_ROWS=`
 分割原图|Source image for splitting|分割元の画像|분할 원본 이미지|Image source à découper|Quellbild zur Teilung|Imagen original para dividir|Imagem original para dividir
 质量|Quality|品質|품질|Qualité|Qualität|Calidad|Qualidade
 大小|File size|ファイルサイズ|파일 크기|Taille du fichier|Dateigröße|Tamaño del archivo|Tamanho do arquivo
-确认裁剪|Trim transparency|透明部分を裁剪|투명 영역 자르기|Rogner la transparence|Transparenz beschneiden|Recortar transparencia|Recortar transparência
+确认裁剪|Trim transparency|透明な余白を除去|투명 여백 자르기|Rogner les bords transparents|Transparente Ränder entfernen|Recortar bordes transparentes|Recortar bordas transparentes
 裁剪后|After trim|裁剪後|자른 후|Après rognage|Nach Beschnitt|Tras recorte|Após recorte
 体积|File size|ファイルサイズ|파일 크기|Taille du fichier|Dateigröße|Tamaño del archivo|Tamanho do arquivo
 文本拆合模式|Text split / merge mode|テキスト分割・結合モード|텍스트 분할 / 병합 모드|Mode texte|Textmodus|Modo de texto|Modo de texto
