@@ -600,7 +600,7 @@ export default function SettingsPage({ request, selection, settings, buildId, ta
           <Panel title="诊断日志">
         <div className="diagnostic-log-row">
           <p className="diagnostic-log-description">
-              日志仅保存在本地，导出前会自动隐藏密钥和图片内容。当前记录 {diagnosticStatus.entryCount} 条。
+              日志仅保存在本地，仅导出操作类型、错误类别和耗时等排障信息，不含密钥、服务地址、图片或设计文字。当前记录 {diagnosticStatus.entryCount} 条。
           </p>
           <div className="diagnostic-log-actions">
             <label className="checkline diagnostic-toggle">
@@ -637,7 +637,7 @@ export default function SettingsPage({ request, selection, settings, buildId, ta
           <Panel title="本地设置">
             <div className="privacy-note-list">
               <PrivacyNote title="服务配置" detail="服务地址和密钥保存在当前 Figma 客户端。密钥仅以掩码显示。"/>
-              <PrivacyNote title="记录与排查" detail="插件不保存提示词和生成图片历史。问题排查记录只保存在本地，导出时会自动隐藏密钥和图片内容。"/>
+              <PrivacyNote title="记录与排查" detail="诊断日志只保存在本地，仅导出排障信息，不含密钥、服务地址、图片或设计文字，不会自动发送。"/>
             </div>
           </Panel>
         </SettingsSubPage>) : null}
@@ -647,7 +647,7 @@ export default function SettingsPage({ request, selection, settings, buildId, ta
             <span className="feedback-intro-icon" aria-hidden="true"><MessageCircle size={20}/></span>
             <div>
               <h2 id="feedback-support-title">联系与支持</h2>
-              <p>遇到问题或有功能建议？欢迎通过以下方式联系我。</p>
+              <p>反馈问题时，可在设置中心的诊断日志中导出日志，并附上复现步骤、预期和实际结果。导出文件仅含排障信息；截图请先移除敏感内容，不要发送 API 密钥。</p>
             </div>
           </section>
           <Panel title="反馈渠道">
@@ -856,7 +856,8 @@ function settingsViewLabel(view: SettingsView): string {
     return labels[view] ?? '设置中心';
 }
 function downloadDiagnosticSnapshot(snapshot: DiagnosticExportSnapshot) {
-    const blob = new Blob([JSON.stringify(snapshot, null, 2)], { type: 'application/json' });
+    // Re-apply the shared boundary after merging UI/main data and before serialization.
+    const blob = new Blob([JSON.stringify(exportDiagnostics(snapshot), null, 2)], { type: 'application/json' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = `designpromax-diagnostic-${formatDiagnosticTimestamp(new Date())}.json`;

@@ -81,6 +81,8 @@ dist/build-info.json  构建输入及 UTF-8 体积证据
 
 ## 隐私、开源与验收边界
 
+反馈问题可在设置中心导出诊断日志，并附上复现步骤、预期和实际结果。日志采用统一白名单，仅保留排障元数据，不包含密钥、服务地址、自由错误文本、图片或设计文字，不会自动发送。截图及自行填写的问题描述仍需移除敏感内容。详见 [联系与支持](docs/SUPPORT.md)。
+
 本地工具及 OCR 不上传文档或图片。抠图仅在用户授权并主动处理时将选中图片和密钥发送给所选服务；自定义服务需支持 HTTPS、CORS、`POST /remove-background`、Bearer 密钥及 `image` 表单字段，并返回 PNG。密钥保存在客户端存储中，不加密；不写入反馈或源码。
 
 项目源码公开于 [DesignProMAX Toolkit](https://github.com/BeatsAD/DesignProMAX-Toolkit)，授权见 [MIT](LICENSE)，第三方资源保留各自许可，见 [第三方声明](THIRD_PARTY_NOTICES.md)。当前尚未打包上架 Figma Community；Figma 开发插件已接入当前构建，真实字体、图片写回、事务恢复及离线 OCR 链路已有样例证据；OCR 数字样例存在误识别。外部抠图服务、复杂布局与大文件性能、完整参数矩阵及发布材料，仍需在插件正式发布前验收。
