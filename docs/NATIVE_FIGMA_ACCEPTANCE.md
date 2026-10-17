@@ -35,7 +35,7 @@
 
 ## 首次运行报错：已修复登记路径失效
 
-用户提供的客户端控制台明确报错：`Unable to load code` / `web:getLocalFileExtensionSource` / `ENOENT`，读取目标为 `/Users/changwenbin/Documents/DesignProMAX Toolkit/manifest.json`。这说明 Figma 保存的注册路径与工程内的实际文件位置不同，尚未执行插件主线程。
+用户提供的客户端控制台明确报错：`Unable to load code` / `web:getLocalFileExtensionSource` / `ENOENT`，读取目标的匿名化示例为 `/Users/<user>/Documents/DesignProMAX Toolkit/manifest.json`（本机用户名已替换）。这说明 Figma 保存的注册路径与工程内的实际文件位置不同，尚未执行插件主线程。
 
 确认 Documents 下该目录及 manifest 均不存在后，建立单个目录链接，将原登记路径指向独立工程中的 `DesignProMAX Toolkit/`。没有移动、删除现有文件，也没有修改 Figma 的应用配置。保留真实 ID。
 
