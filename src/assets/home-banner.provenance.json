@@ -2,7 +2,6 @@
   "date": "2026-10-16",
   "generator": "built-in image_gen.imagegen",
   "reference": "src/reference/ui/assets/home-banner.png (style reference only, not the production image)",
-  "prompt": "Use case: stylized-concept. Asset type: production background image for a small design plugin homepage banner, wide 3:1 aspect ratio (1536x512). Input image is STYLE REFERENCE ONLY. Regenerate a new image matching its polished glossy blue 3D toolbox and blue-violet palette. Composition: a single compact rounded blue toolbox on the far right third, subtle silver latches, handle, tiny non-letter design tool motifs such as cursor arrow and ruler. Entire left 65% is clean quiet continuous deep violet-to-blue gradient negative space for frontend overlay copy. Smooth flowing blue light toward the right, restrained glow and two small sparkles near the toolbox, premium app illustration. Keep the toolbox fully within rightmost third with safe margins, readable at 400x133px. Full bleed opaque image with no frame or rounded borders. ABSOLUTELY NO TEXT anywhere: no words, letters, numbers, Chinese characters, letter T, logos, watermarks or typographic marks. Left area contains no objects or decorative marks. This replaces the old image that had baked-in Chinese advertising; all copy will be separate HTML. Produce only the new text-free art, not a UI mockup.",
   "generatedDimensions": [
     2172,
     724
@@ -18,5 +17,6 @@
   "pngSource": "src/assets/home-banner-no-text.png",
   "pngSourceSha256": "1b5b9a3685ea3ad2acb0eca196a419356d4efc02a6d37f8c290066b65fa34c50",
   "conversion": "sips resample 404x1212; sips format jpeg quality 85",
-  "networkAtRuntime": false
+  "networkAtRuntime": false,
+  "generationSummary": "AI-generated blue toolbox artwork using author-owned style references; full creative prompt retained locally."
 }

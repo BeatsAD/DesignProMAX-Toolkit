@@ -1,45 +1,32 @@
-# Figma 图片写入兼容与透明裁剪恢复
+# Image operations and limits / 图片操作与限制
 
-2026-10-16，独立 Figma 工程 v0.3.1。
+Applies to the v0.3.2 development preview. See [current status](STATUS.md) for validation coverage and [usage](USAGE.md) for the common workflow.
 
-## 根因
+## Create or replace / 新建或替换
 
-透明裁剪已在 UI 完成 PNG 解码、透明边识别和结果编码。原共享 `WRITE_IMAGES` 对 Crop、Tile、图片变换、旋转、自动布局和实例返回笼统的 `UNSUPPORTED`，前端又将已生成的裁剪结果改成不可选择的失败状态。图片分割与抠图也复用这个写入通道。
+- New result layers are placed in free space on the current page, outside the source's auto layout or component instance. Existing top-level objects and earlier batch results are avoided.
+- Crop, FIT/FILL, image rotation, and layer rotation are mapped to the processed image coordinates.
+- Replacing a plain rectangle can tighten its visible transparent bounds. Auto-layout items, instance contents, rounded/stroked objects, multiple fills, and special shapes retain their geometry while the image mapping is adjusted; this avoids resizing the layout or mask shape.
+- Other fills, image filters, and opacity are retained. Locked targets and protected ancestors are rejected.
 
-## 修复
+新建结果放在当前页空闲区域，避开已有顶层对象和本批结果，不写入原自动布局或组件实例。普通矩形替换可收紧透明边；自动布局、实例、圆角、描边、多填充和特殊形状保留几何尺寸，仅补偿图片映射。其余填充、图片滤镜和透明度保留；锁定对象及受保护祖先不可写入。
 
-- 图片放置独立维护于 `src/engine/images/placement.ts`，写入位于 `write.ts`，没有把工具实现堆入公共页面。
-- 将 Figma 图片填充映射为归一化图像坐标，组合裁剪边界、图层变换和结果 PNG 的新坐标；支持 Crop、FIT/FILL、图层旋转及图片旋转。使用多边形裁切计算原视口内仍需保留的范围，避免简单按原图层宽高缩放造成偏移或拉伸。
-- 新建图层放在当前页面自由区域，保留完整处理结果，不写入原来的自动布局或组件实例；在原顶层容器右侧避开已有顶层对象及先前批次结果。
-- 替换普通矩形时收紧可见透明边，并沿原旋转坐标移动原点。自动布局、实例、圆角、描边、多填充及特殊形状保留几何尺寸，仅补偿图片映射并替换图片填充，避免改动布局或蒙版形状。其他填充和图片滤镜/透明度保留。
-- 仍保护锁定对象及祖先。预览后图像内容、填充、尺寸、位置或容器关系变化会拒绝旧结果，要求重新预览。整批图像与坐标先验证再创建对象；替换异常时恢复原填充与几何。
-- 写入失败与图像处理失败分开记录。裁剪结果、字节、预览和勾选保留，显示已翻译的具体原因，可以直接重试。成功重试清除该项写入错误。单项失败不会中断后续项目。
-- 抠图结果即使经过服务端缩放，也按照完整源图范围映射；前端按实际成功/失败数量反馈。
+## Tiled images / 平铺图片
 
-直接替换平铺（Tile）仍有明确限制：裁掉单张瓦片的透明边会改变重复间距，不能用单次仿射变换同时保持原重复效果。此时提示使用“新建裁剪图层”，结果继续保留；独立新建可正常使用。尚未将平铺替换伪装成成功。
+Replacing a tiled image after trimming one tile's transparent border would change repetition spacing. Use **create a new cropped layer** instead; the processed result remains available.
 
-## 验证与边界
+平铺（Tile）图片裁掉单张瓦片透明边后，直接替换会改变重复间距。此时请使用“新建裁剪图层”，处理结果会继续保留。
 
-`npm run verify` 通过类型检查、最新生产构建、77 项检查、八语文案检查（0 缺失）及 1,681 个构建输入隔离验证。新增针对 Crop 坐标、FIT/FILL 居中、图片/图层旋转、自动布局/实例保尺寸、旧预览拒绝、异常恢复、批次部分失败、输出避让及抠图重采样的回归检查。完整记录见本机 `output/transparent-crop-fix/verify.log`。
+## Changed sources and failures / 源变化与失败
 
-对同一最新生产构建另运行启动、离线资源、原生资源完整性及紧凑窗口检查。浏览器真实 React 页面模拟第一次图片创建失败，验证结果字节、预览、勾选和按钮保留，随后重试仅新增一个结果；错误结果与替换确认框覆盖八语 × 320/380px × 深浅主题，共 64 组，无横向溢出或关键按钮裁切。
+Changes to image content, fills, geometry, selection, or container relationships invalidate old results. Reread the source or regenerate the preview before writing.
 
-真实 Figma 使用同步后的注册开发插件验证：
+A write failure is separate from image-processing failure: processed bytes, previews, and selections remain available for supported retries. If the outcome is unknown, inspect the canvas before repeating an operation. An individual failure does not by itself establish whether other batch items succeeded; inspect the final receipt and document.
 
-- 原始素材 23：源 PNG 60×60，裁剪为 50×35，成功新建 `原始素材 23_result`，反馈“已写入 1 项，失败 0 项”。
-- 原始素材 24：仅在复制并命名的 `裁剪验证 - 素材24副本` 上替换。源 PNG 60×60 → 46×37，图层 100×100 → 约 76.67×61.67，写入成功。
-- 原始素材 28：仅在 `裁剪验证 - 素材28副本` 上替换。原填充矩阵包含非默认缩放 0.5776459、偏移 0.4149357；源 PNG 1536×1024 → 1503×932，图层 292×337 → 约 292×306.72，图片映射补偿为缩放约 0.5903288、偏移约 0.4094087。
+预览后源图片、填充、几何、选区或容器关系变化，会拒绝旧结果。写入失败时保留已处理图片、预览和勾选，按提示重试；结果不明确时先检查画布。批次中单项失败不能代表整批没有写入，以最终回执及文档为准。
 
-原素材保留。画布中保留一个新建结果和两个明确命名的验证副本，供用户检查；不批量删除或清理用户文档。自动布局、实例和旋转的组合由回归检查覆盖，本轮未逐一在真实宿主构建所有组合，也未调用真实抠图服务。
+## Validation limits / 验证边界
 
-## 启动与资源
+Automated checks cover coordinate mapping, rotation, geometry preservation, stale-result rejection, recovery, and partial failures. Earlier targeted native Figma checks exercised image creation/replacement and transaction recovery. They do not establish every auto-layout/instance/rotation combination, external background-removal service, or complex-document case. CI and browser simulation do not replace native checks.
 
-| UTF-8 字节指标 | 修改前 | 修改后 | 变化 |
-| --- | ---: | ---: | ---: |
-| 首次 showUI HTML | 1,142,763 | 1,153,288 | +10,525 |
-| 完整离线 HTML | 8,163,235 | 8,173,760 | +10,525 |
-| 主线程 JS | 87,176 | 93,762 | +6,586 |
-
-UI 增长来自独立错误说明、重试状态与八语翻译；主线程增长来自图片坐标与写入校验。首屏严格小于 1,572,864 字节，未提高预算。未新增重资源、依赖或首屏初始化；新计算仅在读取/写入图片时执行。宣传图仍在首页提交后读取，OCR 仍首次使用时读取。未执行发布打包或版本递增。
-
-参考：[Figma Paint](https://developers.figma.com/docs/plugins/api/Paint/)、[relativeTransform](https://developers.figma.com/docs/plugins/api/properties/nodes-relativetransform/)。
+自动检查覆盖图片映射、旋转、保尺寸、旧结果拒绝、恢复及部分失败；此前针对性 Figma 原生检查覆盖部分新建、替换和事务恢复。复杂布局组合、真实外部抠图服务及复杂文档仍需扩大验收。

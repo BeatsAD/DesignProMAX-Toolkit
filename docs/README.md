@@ -1,27 +1,25 @@
 # Documentation / 文档目录
 
-## Start here
+## Start here / 从这里开始
 
 - [Installation / 安装](INSTALLATION.md)
-- [Current status / 当前状态](STATUS.md)
+- [Usage and recovery / 使用与恢复](USAGE.md)
+- [Image operations and limits / 图片操作与限制](FIGMA_IMAGE_WRITES.md)
+- [Current status and validation / 当前状态与验证](STATUS.md)
 - [Privacy / 隐私](PRIVACY.md)
 - [Support / 联系与支持](SUPPORT.md)
 - [Changelog / 更新记录](../CHANGELOG.md)
 - [Contributing / 贡献指南](../CONTRIBUTING.md)
 - [Security reporting / 安全报告](../SECURITY.md)
 
-## Engineering records
+## Contributor references / 贡献者资料
 
-These records preserve each stage's evidence and limitations. Local `output/` receipts and raw screenshots mentioned in them are not distributed. Read historical test counts and “not installed/not pushed” statements with their dates; use [current status](STATUS.md) for the latest summary.
+- [Eight-language glossary / 八语术语表](LOCALIZATION_GLOSSARY.md)
+- [Repository artwork / 仓库展示图](images/README.md)
+- [Third-party notices / 第三方声明](../THIRD_PARTY_NOTICES.md)
 
-以下文档保留各阶段的实施、验收和限制，不统一改写成当前结果。本机原始日志与验收截图不随仓库分发。
+`locale-data-exemptions.json` is consumed by locale checks; `mastergo-ui-baseline.json` is consumed by reference-contract tests. Both are required development inputs. Asset source references and checksums remain in `src/assets/` and `docs/images/`; third-party licenses remain in `licenses/`.
 
-| Topic | Records |
-| --- | --- |
-| Implementation | [Plan](DEVELOPMENT_PLAN.md), [stages](IMPLEMENTATION_STATUS.md) |
-| Reliability/host | [v0.3.2 fixes](RELIABILITY_FIX_20261017.md), [native Figma](NATIVE_FIGMA_ACCEPTANCE.md), [browser](BROWSER_ACCEPTANCE.md) |
-| Languages/support | [Latest copy review](LOCALIZATION_REVIEW_20261017.md), [glossary](LOCALIZATION_GLOSSARY.md), [language stages](LANGUAGE_ACCEPTANCE.md), [diagnostic privacy](DIAGNOSTIC_EXPORT_PRIVACY.md) |
-| UI | [Preserved UI](UI_RESTORATION.md), [consistency](DESIGN_CONSISTENCY.md), [theme](FIGMA_THEME.md), [typography](FIGMA_TYPOGRAPHY.md), [380px window](WINDOW_380.md) |
-| Tools/assets | [Image writes](FIGMA_IMAGE_WRITES.md), [text fill](TEXT_FILL_CUSTOM_ONLY.md), [banner](BANNER_ASSET.md), [tags](TAG_CLEANUP.md), [dialog copy](DIALOG_COPY_CLEANUP.md) |
+Public documentation summarizes supported behavior and validation limits. Internal plans, raw acceptance logs, dated implementation notes, and historical migration tools remain local-only. Removing them from the current tree does not erase older Git history.
 
-Licenses and provenance remain in [third-party notices](../THIRD_PARTY_NOTICES.md), `licenses/`, and `src/assets/`.
+公开文档保留安装、使用、限制、验证摘要和贡献说明。内部计划、原始验收记录、阶段实施记录及历史迁移脚本仅在本机保留；当前目录整理不清除旧 Git 历史。上述两个 JSON 为检查输入，不能作为普通过程记录移除。

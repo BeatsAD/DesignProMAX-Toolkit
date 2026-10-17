@@ -10,7 +10,7 @@ These are AI-generated promotional illustrations, not screenshots or native-host
 | 03-local-ocr.png | Local OCR workflow; recognition results need review | 1672×941 |
 | 04-document-tools.png | Cleanup review, statistics, size adaptation | 1672×941 |
 
-The four feature illustrations were explicitly selected for public use on 2026-10-17 and copied unchanged from reviewed local artwork. The cover was generated separately with built-in imagegen. Its exact prompt, references, dimensions, export details, and checksum are in [social-preview.provenance.json](social-preview.provenance.json). The original PNG and raw QA outputs remain local.
+The four feature illustrations were explicitly selected for public use on 2026-10-17 and copied unchanged from reviewed local artwork. The cover was generated separately with built-in imagegen. Its generation summary, references, dimensions, export details, and checksum are in [social-preview.provenance.json](social-preview.provenance.json). The full creative prompt, original PNG, and raw QA outputs remain local.
 
 GitHub's repository Social preview setting is separate from placing this image in the README. `social-preview.jpg` was uploaded in the repository's general settings on 2026-10-17; publishing a file alone does not set the sharing image. The settings preview was visually checked.
 
