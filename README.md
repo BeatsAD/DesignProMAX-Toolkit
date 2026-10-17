@@ -1,5 +1,7 @@
 # DesignProMAX Toolkit
 
+![DesignProMAX Toolkit — open-source tools for Figma](docs/images/social-preview.jpg)
+
 Free, open-source productivity tools for Figma: text, images, local OCR, and document cleanup.
 
 [![CI](https://github.com/BeatsAD/DesignProMAX-Toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/BeatsAD/DesignProMAX-Toolkit/actions/workflows/ci.yml)
@@ -22,6 +24,23 @@ English · [简体中文](README.zh-CN.md)
 - Light/dark themes, compact mode, and a resizable window (default 380×650, minimum width 320px).
 - Local tools and OCR process content without uploading documents or images. Optional background removal requires your own service key and explicit image-upload consent; the service may charge fees.
 - Review previews and results. OCR can misread text, especially numbers, dates, and amounts.
+
+## Feature illustrations
+
+These AI-generated graphics illustrate workflows; they are **not application screenshots or native Figma acceptance evidence**.
+
+<details>
+<summary>View text, image, OCR, and document workflows</summary>
+
+![Text fill, find and replace, split and merge — illustrative workflow](docs/images/01-text-tools.png)
+
+![Trim transparency and split images into layers — illustrative workflow](docs/images/02-image-tools.png)
+
+![Local English and Simplified Chinese OCR — illustrative workflow](docs/images/03-local-ocr.png)
+
+![Cleanup review, statistics, and size adaptation — illustrative workflow](docs/images/04-document-tools.png)
+
+</details>
 
 ## Install in Figma
 

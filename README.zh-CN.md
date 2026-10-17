@@ -1,5 +1,7 @@
 # DesignProMAX Toolkit
 
+![DesignProMAX Toolkit — open-source tools for Figma](docs/images/social-preview.jpg)
+
 免费、开源的 Figma 效率工具箱，提供文本、图片、本地 OCR 和文档整理工具。
 
 [English](README.md) · 简体中文
@@ -19,6 +21,23 @@
 - 支持明暗主题、紧凑模式和调整窗口尺寸；默认 380×650，最窄 320px。
 - 本地工具和 OCR 不上传文档或图片。抠图需自备服务密钥、明确授权上传，外部服务可能收费。
 - 执行前核对预览，执行后核对结果。OCR 可能误识别，尤其需要复核数字、日期和金额。
+
+## 功能展示图
+
+以下为 AI 生成的功能宣传示意图，**不是真实界面截图或 Figma 原生验收证据**。
+
+<details>
+<summary>展开查看文本、图片、OCR 和文档工具示意</summary>
+
+![文本填充、查找替换和拆分合并示意](docs/images/01-text-tools.png)
+
+![透明边裁剪和图片分割示意](docs/images/02-image-tools.png)
+
+![简中和英文的本地 OCR 示意](docs/images/03-local-ocr.png)
+
+![清理预览、统计和尺寸适配示意](docs/images/04-document-tools.png)
+
+</details>
 
 ## 安装到 Figma
 

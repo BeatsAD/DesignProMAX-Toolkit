@@ -25,6 +25,7 @@ Documentation-only changes that do not affect build inputs need link, command, a
 
 ## Pull requests
 
+- Develop on a feature branch and open a PR against `main`. The `Verify` CI check must pass and the branch must be up to date. Direct pushes, force pushes, and deletion of `main` are blocked, including for administrators. A second reviewer is not required, so the maintainer may merge their own PR after checks pass.
 - Keep changes focused; explain the problem, resulting behavior, and checks.
 - Keep eight UI languages in sync. Load new resources when needed rather than on startup.
 - Preserve settings and document data.

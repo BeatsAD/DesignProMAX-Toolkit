@@ -1,0 +1,22 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "date": "2026-10-17",
+  "use": "Repository documentation and GitHub social preview only; not a plugin runtime asset or host screenshot.",
+  "prompt": "Use case: ads-marketing. Create a NEW dedicated GitHub social preview cover for the open-source Figma plugin DesignProMAX Toolkit. Do not reuse an existing feature slide layout. Target a wide EXACT 2:1 composition (1280x640 requested; preserve 2:1 if rendering at another native resolution), opaque background. Reference image 1 is the author's existing blue toolbox logo, preserve its recognizable blue glossy toolbox identity. Reference image 2 is STYLE ONLY: polished cool white/ice blue background, electric cobalt, subtle translucent glass and restrained soft blue light. Design a clean confident repository cover with generous safe margins: on the left large crystal-clear exact typography 'DesignProMAX Toolkit', preferably two lines 'DesignProMAX' then 'Toolkit', with 'Toolkit' in cobalt. Under it exact subtitle 'Open-source tools for Figma'. Under subtitle only these small text labels on one line 'Text  •  Images  •  Local OCR'. On the right a single beautifully rendered glossy blue toolbox based on reference logo, medium large, uncropped, with small text/photo/crop symbols integrated into the toolbox; no fake application screenshot. At bottom-left small exact text 'MIT licensed'. Composition readable as a small link preview, maximum 4 text groups, ample negative space, no UI panels or feature cards, no extra logos, no watermarks, no claim of Community availability or full host acceptance. All text must be spelled exactly. Create a polished final image, not a webpage or browser screenshot.",
+  "referenceImages": [
+    "src/reference/ui/assets/logo.png",
+    "docs/images/01-text-tools.png"
+  ],
+  "generatedDimensions": [
+    1774,
+    887
+  ],
+  "publishedAsset": "docs/images/social-preview.jpg",
+  "publishedDimensions": [
+    1774,
+    887
+  ],
+  "export": "JPEG quality 88; original dimensions and composition preserved; original generated PNG retained locally.",
+  "bytes": 306997,
+  "sha256": "ef9b737263fdbfab59c40151473e89b0291ea8e09abfcb887dc282050569e0a0"
+}

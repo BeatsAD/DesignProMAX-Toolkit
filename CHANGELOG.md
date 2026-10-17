@@ -4,6 +4,8 @@ This records source changes. Source versions do not establish Figma Community pu
 
 ## Unreleased
 
+- Updated fflate from 0.8.2 to 0.8.3 for [GHSA-px8p-9vwx-vf98](https://github.com/advisories/GHSA-px8p-9vwx-vf98). Added bounded malformed-ZIP64 regression checks for Node/browser exports and valid ZIP/gzip controls. Product code uses gzip decoding; no product ZIP extraction call was found.
+- Added four selected feature illustrations and a dedicated repository/share cover, explicitly labeled as promotional artwork rather than host screenshots. They are not runtime assets.
 - Added English/Chinese introductions, installation, current status, privacy, and contribution guides.
 - Added GitHub CI, issue forms, a PR template, and dependency-update configuration.
 - Anonymized a local path in the native acceptance document; older Git history retains the original entry.
