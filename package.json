@@ -23,7 +23,7 @@
     "lucide-react": "0.468.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "tesseract.js": "5.1.1"
+    "tesseract.js": "7.0.0"
   },
   "devDependencies": {
     "@figma/plugin-typings": "1.142.0",
