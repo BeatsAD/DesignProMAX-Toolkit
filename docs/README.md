@@ -2,7 +2,8 @@
 
 ## Start here / 从这里开始
 
-- [Installation / 安装](INSTALLATION.md)
+- [Installation from source / 源码安装](INSTALLATION.md)
+- [Prebuilt development package / 预编译开发插件包](PREBUILT.md)
 - [Usage and recovery / 使用与恢复](USAGE.md)
 - [Image operations and limits / 图片操作与限制](FIGMA_IMAGE_WRITES.md)
 - [Current status and validation / 当前状态与验证](STATUS.md)

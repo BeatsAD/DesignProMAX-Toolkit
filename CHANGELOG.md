@@ -2,7 +2,12 @@
 
 This records source changes. Source versions do not establish Figma Community publication or downloadable bundles.
 
-## Unreleased
+## 0.3.3 — 2026-10-18 — Development preview
+
+- Added eight-language welcome-announcement instructions for exporting filtered diagnostic logs and providing reproduction details. Existing language preferences and announcement acknowledgements are preserved; first use still offers English as the default language choice.
+- Added an allowlisted prebuilt Figma development-plugin ZIP, local ID configuration page, package-integrity check, and installation guide. The package requires manual manifest import, not a Community installation.
+- Retained notices from the pinned OCR native build dependencies, including the WebP patent grant, and their source/checksum provenance.
+- Updated public version/status documentation and retained the GitHub private vulnerability reporting channel.
 
 - Replaced an account-specific test plugin ID with synthetic data, kept internal process records and historical migration tools local-only, and shortened public artwork provenance while preserving source references and checksums. Public guides now summarize usage and acceptance limits; existing Git history is unchanged.
 

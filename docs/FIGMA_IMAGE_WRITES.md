@@ -1,6 +1,6 @@
 # Image operations and limits / 图片操作与限制
 
-Applies to the v0.3.2 development preview. See [current status](STATUS.md) for validation coverage and [usage](USAGE.md) for the common workflow.
+Applies to the v0.3.3 development preview. See [current status](STATUS.md) for validation coverage and [usage](USAGE.md) for the common workflow.
 
 ## Create or replace / 新建或替换
 

@@ -9,7 +9,7 @@ Free, open-source productivity tools for Figma: text, images, local OCR, and doc
 
 English · [简体中文](README.zh-CN.md)
 
-**Version 0.3.2 · Development preview.** Source is public; the plugin is not yet on Figma Community. Build it locally and import it as a development plugin. See [installation](docs/INSTALLATION.md) and [current status](docs/STATUS.md).
+**Version 0.3.3 · Development preview.** Use a [prebuilt development package](docs/PREBUILT.md) from [Releases](https://github.com/BeatsAD/DesignProMAX-Toolkit/releases), when available, or build from source. Both use Figma desktop development-plugin import. The initial 0.3.2 Community submission was recorded on 2026-10-17; submission does not establish approval. See [installation](docs/INSTALLATION.md) and [current status](docs/STATUS.md).
 
 ## Features
 
@@ -44,7 +44,7 @@ These AI-generated graphics illustrate workflows; they are **not application scr
 
 ## Install in Figma
 
-Requires Node.js 22+, npm, and the Figma desktop app for this development-plugin workflow.
+For a prebuilt ZIP, follow [these steps](docs/PREBUILT.md); Node.js and npm are not needed. For a source build, use Node.js 22+, npm, and the Figma desktop app:
 
 ```sh
 git clone https://github.com/BeatsAD/DesignProMAX-Toolkit.git
@@ -53,7 +53,7 @@ npm ci
 npm run build
 ```
 
-Then create your own Figma development-plugin ID, generate the local manifest, and import it. Follow the [step-by-step installation guide](docs/INSTALLATION.md). No shared plugin ID or prebuilt download is included.
+Then create your own Figma development-plugin ID, generate the local manifest, and import it. Follow the [step-by-step installation guide](docs/INSTALLATION.md). No account-specific plugin ID is distributed; configure your own ID before importing.
 
 ## Try the browser demo
 

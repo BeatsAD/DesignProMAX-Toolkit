@@ -2,7 +2,9 @@
 
 [English README](../README.md) · [中文首页](../README.zh-CN.md)
 
-Version 0.3.2 is a source/development preview, not a Figma Community release. This guide uses a Figma desktop development plugin; no published download or shared plugin ID is provided.
+Version 0.3.3 is a development preview. For a prebuilt ZIP without Node.js/npm, follow [prebuilt installation](PREBUILT.md). The source-build steps below use a Figma desktop development plugin and your own plugin ID. The initial 0.3.2 Community submission was recorded on 2026-10-17; current approval/public availability must be checked separately.
+
+无需构建的预编译 ZIP 安装见[独立步骤](PREBUILT.md)。下文保留源码构建方法；Community 提交记录不代表已获准公开上架。
 
 ## 1. Build the source
 
