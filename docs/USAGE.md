@@ -1,6 +1,6 @@
 # Usage and recovery / 使用与恢复
 
-Version 0.3.2 is a development preview. Follow [installation](INSTALLATION.md) and review [current validation limits](STATUS.md) before using it on important documents.
+Version 0.3.3 is a development preview. Follow [installation](INSTALLATION.md) and review [current validation limits](STATUS.md) before using it on important documents.
 
 ## Common workflow / 基本流程
 

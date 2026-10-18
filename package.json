@@ -15,7 +15,8 @@
     "configure:plugin": "node scripts/configure-plugin.mjs",
     "dev": "npm run build && node scripts/preview-server.mjs",
     "preview": "node scripts/preview-server.mjs",
-    "check:locales": "node scripts/audit-live-locales.mjs"
+    "check:locales": "node scripts/audit-live-locales.mjs",
+    "package:figma": "npm run verify && node scripts/package-figma.mjs"
   },
   "dependencies": {
     "fflate": "0.8.3",

@@ -35,7 +35,8 @@ Versions below come from this project's lockfile and installed package metadata.
 - Tesseract.js 5.1.1 and tesseract.js-core 5.1.1: Apache-2.0; retain the package licenses and `licenses/tesseract-worker-bundled-LICENSE.txt` for bundled worker components (including buffer, ieee754, regenerator-runtime and zlib.js).
 - English and Simplified Chinese models: official [tesseract-ocr/tessdata_fast](https://github.com/tesseract-ocr/tessdata_fast), Apache-2.0. Pinned commit, source URLs, raw and gzip SHA-256 checksums are recorded in `src/assets/ocr/provenance.json`. Models are gzip-compressed locally with a zero timestamp; tests verify both compressed and original bytes.
 - `licenses/tessdata-fast-Apache-2.0.txt` preserves the model repository license.
-- Before a public release, recheck the compiled core's upstream dependency notices against its exact release source; the npm package license alone is not a complete inventory of its native components. This browser-test version has not been published.
+- `licenses/ocr-native-provenance.json` records npm core 5.1.1 gitHead, the selected LSTM artifact checksum, and the exact upstream submodule commits. Retained notices cover Tesseract, Leptonica, libjpeg, giflib, libpng, libtiff, libwebp (including PATENTS), zlib, and openlibm from that build source. This is a conservative notice set including optional codecs, not a claim of exhaustive binary composition or reproducible native compilation.
+- This software is based in part on the work of the Independent JPEG Group. The corresponding unaltered upstream README and other native notices are retained under `licenses/ocr-native-*-NOTICE.txt`.
 
 ## Optional external service
 

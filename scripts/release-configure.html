@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Configure DesignProMAX Toolkit</title>
+<style>body{font:16px/1.6 system-ui;max-width:660px;margin:48px auto;padding:0 24px;color:#17213a}input,button{font:inherit;padding:10px;margin:6px 0}input{width:95%}button{cursor:pointer}#status{white-space:pre-wrap}</style>
+<h1>Configure DesignProMAX Toolkit</h1>
+<p>Create a Figma Design → Custom UI development plugin. Copy its numeric ID here. No Node.js or network request is needed.</p>
+<p>在 Figma 创建 Design → Custom UI 开发插件，将模板 manifest.json 中的数字 ID 填入下方。本页面离线运行，不发送 ID。</p>
+<form id="form"><label for="pluginId">Your Figma plugin ID / 你的插件 ID</label><input id="pluginId" required inputmode="numeric" pattern="[0-9]+" autocomplete="off"><button>Download manifest.json / 下载配置</button></form>
+<p>Move the downloaded manifest.json into this extracted folder, replacing the unconfigured file. Then import that manifest in Figma desktop. Keep the folder in place.</p>
+<p>将下载的 manifest.json 放回解压目录，替换未配置文件，再通过 Figma 桌面版“从 manifest 导入插件”。导入后不要移动目录。</p>
+<p id="status" role="status"></p>
+<script>
+const baseManifest = __MANIFEST_JSON__;
+document.getElementById('form').addEventListener('submit', event => {
+  event.preventDefault();
+  const id = document.getElementById('pluginId').value.trim();
+  if (!/^[0-9]+$/.test(id)) return;
+  const url = URL.createObjectURL(new Blob([JSON.stringify({...baseManifest, id}, null, 2) + '\n'], {type: 'application/json'}));
+  const link = document.createElement('a'); link.href = url; link.download = 'manifest.json'; link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  document.getElementById('status').textContent = 'Downloaded. Replace manifest.json in the extracted folder, then import it.\n已下载。替换解压目录中的 manifest.json 后再导入。';
+});
+</script></html>

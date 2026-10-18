@@ -6,7 +6,7 @@
 
 [English](README.md) · 简体中文
 
-**当前版本 0.3.2，处于开发预览阶段。** 源码已公开，尚未上架 Figma Community；可自行构建并作为开发插件导入。详见[安装指南](docs/INSTALLATION.md)和[当前状态](docs/STATUS.md)。
+**当前版本 0.3.3，处于开发预览阶段。** 可从 [Releases](https://github.com/BeatsAD/DesignProMAX-Toolkit/releases) 获取可用的[预编译开发插件包](docs/PREBUILT.md)，也可自行构建。两者均通过 Figma 桌面版开发插件导入。初版 0.3.2 的 Community 提交记录为 2026-10-17，提交不代表审核通过。详见[安装指南](docs/INSTALLATION.md)和[当前状态](docs/STATUS.md)。
 
 ## 功能
 
@@ -41,7 +41,7 @@
 
 ## 安装到 Figma
 
-需要 Node.js 22+、npm 和 Figma 桌面客户端。
+预编译 ZIP 按[独立安装步骤](docs/PREBUILT.md)操作，无需 Node.js 或 npm。以下为源码构建方式，需要 Node.js 22+、npm 和 Figma 桌面客户端。
 
 ```sh
 git clone https://github.com/BeatsAD/DesignProMAX-Toolkit.git
@@ -50,7 +50,7 @@ npm ci
 npm run build
 ```
 
-之后使用 Figma 为你分配的开发插件 ID 生成本地配置并导入。请按[完整安装指南](docs/INSTALLATION.md)操作；仓库不包含共享插件 ID 或已发布的安装包。
+之后使用 Figma 为你分配的开发插件 ID 生成本地配置并导入。请按[完整安装指南](docs/INSTALLATION.md)操作；发行包不含账号专属插件 ID，导入前需配置自己的 ID。
 
 ## 浏览器体验
 
